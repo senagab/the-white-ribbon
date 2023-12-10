@@ -1,6 +1,7 @@
 @use 'variaveis';
 @use 'hero';
 @use 'header';
+@use 'director';
 
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;
