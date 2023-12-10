@@ -1,5 +1,44 @@
-$bgColor: blue;
+@use 'variaveis';
+
+@mixin text($fontsize: 18px) {
+    font-size: $fontsize;
+    color: variaveis.$primaryColor;
+}
+
+@mixin title($fontsize: 42px) {
+    @include text($fontsize);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$bgcolor;
+}
+
+.text--big {
+    @include text(24px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.title--big {
+    @include title(120px);
+}
+
+.title {
+    @include title;
+}
+
+.title--small {
+    @include title(18px);
 }
