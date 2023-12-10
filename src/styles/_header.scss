@@ -6,6 +6,7 @@
     left: 0;
     background-color:variaveis.$transparent;
     border-bottom: 2px solid #fff;
+    z-index: 999;
 
     &__nav {
         padding: 25px 70px;

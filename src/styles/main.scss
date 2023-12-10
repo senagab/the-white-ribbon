@@ -3,6 +3,7 @@
 @use 'header';
 @use 'director';
 @use 'concept';
+@use 'scenes';
 
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;

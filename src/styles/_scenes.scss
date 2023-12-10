@@ -1,0 +1,51 @@
+.scenes {  
+    height: 90vh;
+    width: 100%;
+    min-width: 1024px;
+
+    &__container {
+        padding: 45px 62px;
+
+        &__title {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 35px;
+
+            .title--small {
+                margin-right: 10px;
+            }
+        }
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 24px;
+            column-gap: 24px;
+
+            &__item {
+                position: relative;
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, .7);
+                    z-index: 1;
+                    cursor: pointer;
+                }
+
+                .scene-item {
+                    height: 200px;
+                    max-width: 100%;
+                    width: 450px;
+                    background-size: contain;
+                }
+
+                .scene-description {
+                    position: absolute;
+                    left: 15px;
+                    bottom: 15px;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
