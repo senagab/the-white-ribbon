@@ -4,3 +4,34 @@ $primaryColor: #fff;
 $secondaryColor: #D6D5D1;
 $darkColor: #000;
 $transparent: transparent;
+
+// fonts
+@font-face {
+    font-family: 'Inter';
+    src: url(../../assets/fonts/Inter-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url(../../assets/fonts/Inter-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Tiempos';
+    src: url(../../assets/fonts/TestTiemposHeadline-Regular.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Tiempos Semibold';
+    src: url(../../assets/fonts/TestTiemposHeadline-Semibold.otf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Tiempos Bold';
+    src: url(../../assets/fonts/TestTiemposHeadline-Bold.otf);
+    font-weight: bold;
+}
