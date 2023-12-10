@@ -1,0 +1,47 @@
+@use 'variaveis';
+
+.concept {
+    background-image: url(../img/concept/concept.png);
+    height: 100vh;
+    min-width: 1024px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // padding-top: -30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        padding: 170px 160px;
+        text-align: center;
+
+        &__title {
+            margin-bottom: 15px;
+
+            span:nth-child(2) {
+                font-family: 'Inter Bold';
+                color: variaveis.$secondaryColor;
+                letter-spacing: 3px;
+            }
+
+            .title {
+                font-family: 'Tiempos', serif;
+            }
+        }
+
+        &__text {
+            display: flex;
+            justify-content: space-between;
+            max-width: 700px;
+
+            .text--small {
+                width: 200px;
+                letter-spacing: 2px;
+                text-wrap: wrap;
+                margin: auto 35px;
+            }
+        }
+    }
+}

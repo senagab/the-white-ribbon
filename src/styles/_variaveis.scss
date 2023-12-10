@@ -2,7 +2,6 @@
 $bgcolor: #0A0A0A;
 $primaryColor: #fff;
 $secondaryColor: #D6D5D1;
-$greyColor: #D7D6D4;
 $darkColor: #000;
 $transparent: transparent;
 
@@ -16,7 +15,7 @@ $transparent: transparent;
 @font-face {
     font-family: 'Inter Bold';
     src: url(../../assets/fonts/Inter-Bold.ttf);
-    font-weight: bold;
+    font-weight: 700;
 }
 
 @font-face {

@@ -42,6 +42,20 @@ $textBgColor: #F1ECE9;
                 width: 100%;
             }
 
+            .title-small {
+                font-family: 'Tiempos Semibold', serif;
+                font-size: 24px;
+            }
+
+            .text-small {
+                font-family: 'Inter', sans-serif;
+            }
+
+            .text--small {
+                font-family: 'Inter', sans-serif;
+                letter-spacing: 2px;
+            }
+
             h3, p, span {
                 color: #0C0C0C;
             }

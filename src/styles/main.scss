@@ -2,6 +2,7 @@
 @use 'hero';
 @use 'header';
 @use 'director';
+@use 'concept';
 
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;
@@ -48,4 +49,12 @@ body {
 
 .bold {
     font-weight: 700px;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
 }
