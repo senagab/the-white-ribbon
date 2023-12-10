@@ -1,0 +1,38 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color:variaveis.$transparent;
+    border-bottom: 2px solid #fff;
+
+    &__nav {
+        padding: 25px 70px;
+        
+        .menu {
+            display: flex;
+            justify-content: space-between;
+
+            &__list {
+                display: flex;
+                align-items: baseline;
+
+                &__item {
+                    margin: 8px;
+                    list-style: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.social {
+    height: 20px;
+    width: 20px;
+
+    img {
+
+    }
+}

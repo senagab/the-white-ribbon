@@ -1,4 +1,6 @@
 @use 'variaveis';
+@use 'hero';
+@use 'header';
 
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;
@@ -41,4 +43,8 @@ body {
 
 .title--small {
     @include title(18px);
+}
+
+.bold {
+    font-weight: 700px;
 }

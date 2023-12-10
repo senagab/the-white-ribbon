@@ -1,0 +1,71 @@
+@use 'variaveis';
+
+@mixin little-text($fontsize: 12px) {
+    font-size: $fontsize;
+    max-width: 250px;
+}
+
+@mixin panel (){
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hero {
+    background-image: url(../../dist/img/home/home.png);
+    height: 200vh;
+    min-width: 1024px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    &__container {
+
+        &__top {
+            @include panel;
+            flex-direction: row;
+            justify-content: center;
+            text-align: left;
+            align-items: center;
+
+            .text {
+                margin-left: 15px
+            }
+        }
+
+        &__mid {
+            @include panel;
+            text-align: right;
+            justify-content: center;
+            align-items: center;
+
+            .title--big {
+                color: variaveis.$secondaryColor;
+            }
+            .text {
+                margin-right: 15px
+            }
+        }
+
+        &__bottom {
+            @include panel;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            align-content: center;
+
+            .text {
+                margin-bottom: 5px
+            }
+
+            
+        }
+
+        .title--big {
+        }
+
+        .text {
+            @include little-text;
+        }
+    }
+}
