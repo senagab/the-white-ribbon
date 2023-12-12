@@ -4,6 +4,7 @@
 @use 'director';
 @use 'concept';
 @use 'scenes';
+@use 'footer';
 
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;

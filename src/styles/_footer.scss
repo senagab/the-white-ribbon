@@ -1,0 +1,37 @@
+.footer {
+    padding: 44px 380px;
+    background-color: #000;
+
+    &__text {
+        display: block;
+        text-align: center;
+        align-content: center;
+
+        :nth-child(1) {
+            margin-bottom: 12px;
+        }
+
+        :nth-child(2) {
+            margin-bottom: 12px;
+        }
+    }
+
+    &__socials {
+
+        &__list {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+            &__item {
+                padding: 5px;
+
+            }
+        }
+    }
+}
+
+.social {
+    height: 18px;
+    width: 18px;
+}
