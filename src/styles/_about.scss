@@ -31,7 +31,7 @@
 
                 .ribbon-1 {
                     @include ribbon();
-                    top: -100px;
+                    top: -50px;
                 }
 
                 .ribbon-2 {
@@ -41,17 +41,17 @@
 
                 .ribbon-3 {
                     @include ribbon();
-                    top: 250px
+                    top: 230px
                 }
 
                 .ribbon-4 {
                     @include ribbon();
-                    top: 380px
+                    top: 400px
                 }
 
                 .ribbon-5 {
                     @include ribbon();
-                    top: 550px
+                    top: 500px
                 }
             }
         }

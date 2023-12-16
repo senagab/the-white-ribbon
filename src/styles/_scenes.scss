@@ -4,7 +4,7 @@
     min-width: 1024px;
 
     &__container {
-        padding: 45px 62px;
+        padding: 100px 62px;
 
         &__title {
             display: flex;
@@ -12,8 +12,9 @@
             align-items: center;
             margin-bottom: 35px;
 
-            .title--small {
+            .title {
                 margin-right: 10px;
+                font-size: 35px;
             }
         }
 
