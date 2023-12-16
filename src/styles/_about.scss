@@ -1,0 +1,59 @@
+@mixin ribbon() {
+    position: absolute;
+    max-width: 100%;
+    display: block;
+}
+
+.about {
+    background-image: url('../../dist/img/about/about-bg.png');
+    height: 100vh;
+    min-width: 1024px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__container {
+
+        &__star {
+
+            .star {
+                margin: 30px;
+                height: 60px;
+                width: 60px;
+            }
+        }
+
+        &__ribbons {
+
+            &__item {
+                position: relative;
+
+                .ribbon-1 {
+                    @include ribbon();
+                    top: -100px;
+                }
+
+                .ribbon-2 {
+                    @include ribbon();
+                    top: 100px
+                }
+
+                .ribbon-3 {
+                    @include ribbon();
+                    top: 250px
+                }
+
+                .ribbon-4 {
+                    @include ribbon();
+                    top: 380px
+                }
+
+                .ribbon-5 {
+                    @include ribbon();
+                    top: 550px
+                }
+            }
+        }
+    }
+}

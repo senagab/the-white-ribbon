@@ -5,11 +5,12 @@
     top: 0;
     left: 0;
     background-color:variaveis.$transparent;
-    border-bottom: 2px solid #fff;
+    // border-bottom: 2px solid #fff;
     z-index: 999;
 
     &__nav {
         padding: 25px 70px;
+        background: rgba(12, 12, 12, 0);
         
         .menu {
             display: flex;

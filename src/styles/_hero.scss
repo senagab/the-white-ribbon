@@ -11,13 +11,13 @@
 }
 
 .hero {
-    background-image: url(../../dist/img/home/home.png);
-    height: 200vh;
+    background-image: url(../../dist/img/hero/hero.png);
+    height: 100vh;
     min-width: 1024px;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     &__container {
         margin-top: 50px;
@@ -35,7 +35,7 @@
             }
 
             .text {
-                margin-left: 15px;
+                margin-left: 10px;
                 font-family: 'Inter', serif;
                 letter-spacing: 2px;
             }
@@ -69,7 +69,7 @@
 
             .title--big {
                 font-family: 'Tiempos Bold', serif;
-                font-size: 170px;
+                font-size: 155px;
                 line-height: 115px;
             }
 

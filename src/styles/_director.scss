@@ -8,7 +8,7 @@ $textBgColor: #F1ECE9;
 
         &__image {
             width: 100%;
-            height: 60vh;
+            height: 85vh;
             display: flex;
             justify-content: flex-end;
             flex-direction: column;
@@ -16,9 +16,9 @@ $textBgColor: #F1ECE9;
             background-color: #d7d6d4;
             
             .director-photo {
-                min-width: 480px;
-                width: 100px;
-                height: 375px;
+                min-width: 600px;
+                width: auto;
+                height: 550px;
             }
         }
 

@@ -5,6 +5,7 @@
 @use 'concept';
 @use 'scenes';
 @use 'footer';
+@use 'about';
 
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;
@@ -38,7 +39,7 @@ body {
 }
 
 .title--big {
-    @include title(120px);
+    @include title(100px);
 }
 
 .title {
