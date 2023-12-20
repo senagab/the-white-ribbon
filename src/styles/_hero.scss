@@ -1,6 +1,6 @@
 @use 'variaveis';
 
-@mixin little-text($fontsize: 12px) {
+@mixin little-text($fontsize: 10px) {
     font-size: $fontsize;
     max-width: 250px;
 }
@@ -18,9 +18,10 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    object-fit: contain;
 
     &__container {
-        margin-top: 50px;
+        margin-top: 10vh;
 
         &__top {
             @include panel;
@@ -54,7 +55,6 @@
             }
 
             .text {
-                margin-right: 15px;
                 font-family: 'Inter', serif;
                 letter-spacing: 2px;
             }
@@ -74,7 +74,7 @@
             }
 
             span:nth-child(2) {
-                margin-top: 20px
+                margin-top: 20px;
             }
 
             .text {

@@ -5,8 +5,7 @@
     top: 0;
     left: 0;
     background-color:variaveis.$transparent;
-    // border-bottom: 2px solid #fff;
-    z-index: 999;
+    z-index: 999 !important;
 
     &__nav {
         padding: 25px 70px;
@@ -24,6 +23,11 @@
                     margin: 8px;
                     list-style: none;
                     cursor: pointer;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
                 }
             }
         }
