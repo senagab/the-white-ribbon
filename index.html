@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Das Weisse Band</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
@@ -166,47 +172,76 @@
             </div>
             <div class="scenes__container__list">
                 <div class="scenes__container__list__item">
-                    <!-- <img class="scene-item" src="./dist/img/scenes/scene-1.png" alt="Barn on Fire"> -->
-                    <video class="scene-item" src="./dist/img/scenes/clip-2.mp4" controls poster="./dist/img/scenes/scene-1.png"></video>
-                    <img class="play" src="./dist/img/scenes/play.png" alt="">
-                    <span class="scene-description">
-                        "Barn on Fire"
-                    </span>
+                    <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
+                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img class="play" src="./dist/img/scenes/play.png" alt="">
+                        <span class="scene-description">
+                            Barn on Fire
+                        </span>
+                    </div>
                 </div>
                 <div class="scenes__container__list__item">
-                    <img class="scene-item" src="./dist/img/scenes/scene-2.png" alt="Barn on Fire">
-                    <img class="play" src="./dist/img/scenes/play.png" alt="">
-                    <span class="scene-description">
-                        "Dialogue on the Charriot"
-                    </span>
+                    <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
+                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img class="play" src="./dist/img/scenes/play.png" alt="">
+                        <span class="scene-description">
+                            The Lesson
+                        </span>
+                    </div>
                 </div>
                 <div class="scenes__container__list__item">
-                    <img class="scene-item" src="./dist/img/scenes/scene-3.png" alt="Barn on Fire">
-                    <img class="play" src="./dist/img/scenes/play.png" alt="">
-                    <span class="scene-description">
-                        "Quiet Before the Storm"
-                    </span>
+                    <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
+                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img class="play" src="./dist/img/scenes/play.png" alt="">
+                        <span class="scene-description">
+                            Trip Over the Wire
+                        </span>
+                    </div>
                 </div>
                 <div class="scenes__container__list__item">
-                    <img class="scene-item" src="./dist/img/scenes/scene-4.png" alt="Barn on Fire">
-                    <img class="play" src="./dist/img/scenes/play.png" alt="">
-                    <span class="scene-description">
-                        "The Lesson"
-                    </span>
+                    <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
+                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img class="play" src="./dist/img/scenes/play.png" alt="">
+                        <span class="scene-description">
+                            "Barn on Fire"
+                        </span>
+                    </div>
                 </div>
                 <div class="scenes__container__list__item">
-                    <img class="scene-item" src="./dist/img/scenes/scene-5.png" alt="Barn on Fire">
-                    <img class="play" src="./dist/img/scenes/play.png" alt="">
-                    <span class="scene-description">
-                        "Dinner Table"
-                    </span>
+                    <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
+                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img class="play" src="./dist/img/scenes/play.png" alt="">
+                        <span class="scene-description">
+                            "Barn on Fire"
+                        </span>
+                    </div>
                 </div>
                 <div class="scenes__container__list__item">
-                    <img class="scene-item" src="./dist/img/scenes/scene-6.png" alt="Barn on Fire">
-                    <img class="play" src="./dist/img/scenes/play.png" alt="">
-                    <span class="scene-description">
-                        "The White Ribbon"
-                    </span>
+                    <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
+                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img class="play" src="./dist/img/scenes/play.png" alt="">
+                        <span class="scene-description">
+                            "Barn on Fire"
+                        </span>
+                    </div>
+                </div>
+                <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="videoModalLabel">Video</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <video id="modalVideo" class="modal-video" autoplay>
+                                    <source src="" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -234,5 +269,59 @@
             </ul>
         </div>
     </footer>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const thumbnailElements = document.querySelectorAll('.thumbnail');
+            const videoModal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const modalTitle = document.getElementById('videoModalLabel');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+
+            let currentVideoIndex = 0;
+            let videos = [];
+
+            thumbnailElements.forEach(function (thumbnail, index) {
+                const videoSrc = thumbnail.dataset.videoSrc;
+                const videoTitle = thumbnail.querySelector('.scene-description').innerText;
+
+                videos.push({
+                    src: videoSrc,
+                    title: videoTitle
+                });
+
+                thumbnail.addEventListener('click', function () {
+                    currentVideoIndex = index;
+                    updateModalContent();
+                    $('#videoModal').modal('show');
+                });
+            });
+
+            function updateModalContent() {
+                modalVideo.src = videos[currentVideoIndex].src;
+                modalTitle.innerText = videos[currentVideoIndex].title;
+            }
+
+            function playNextVideo() {
+                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+                updateModalContent();
+            }
+
+            function playPreviousVideo() {
+                currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
+                updateModalContent();
+            }
+
+            nextBtn.addEventListener('click', playNextVideo);
+            prevBtn.addEventListener('click', playPreviousVideo);
+
+            $('#videoModal').on('hidden.bs.modal', function () {
+                modalVideo.pause();
+            });
+        });
+
+    </script>
 </body>
 </html>
