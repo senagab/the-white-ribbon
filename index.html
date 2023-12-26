@@ -31,7 +31,7 @@
                     </div>
                     <div class="menu__list center text">    
                         <div class="menu__list__item">
-                            <a href="#hero">
+                            <a href="#hero" class="logo">
                                 Das Weisse Band
                             </a>
                         </div>
@@ -182,7 +182,7 @@
                 </div>
                 <div class="scenes__container__list__item">
                     <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
-                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img src="./dist/img/scenes/scene-2.png" class="scene-item"></img>
                         <img class="play" src="./dist/img/scenes/play.png" alt="">
                         <span class="scene-description">
                             The Lesson
@@ -191,7 +191,7 @@
                 </div>
                 <div class="scenes__container__list__item">
                     <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
-                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img src="./dist/img/scenes/scene-3.png" class="scene-item"></img>
                         <img class="play" src="./dist/img/scenes/play.png" alt="">
                         <span class="scene-description">
                             Trip Over the Wire
@@ -200,7 +200,7 @@
                 </div>
                 <div class="scenes__container__list__item">
                     <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
-                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img src="./dist/img/scenes/scene-4.png" class="scene-item"></img>
                         <img class="play" src="./dist/img/scenes/play.png" alt="">
                         <span class="scene-description">
                             "Barn on Fire"
@@ -209,7 +209,7 @@
                 </div>
                 <div class="scenes__container__list__item">
                     <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
-                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img src="./dist/img/scenes/scene-5.png" class="scene-item"></img>
                         <img class="play" src="./dist/img/scenes/play.png" alt="">
                         <span class="scene-description">
                             "Barn on Fire"
@@ -218,7 +218,7 @@
                 </div>
                 <div class="scenes__container__list__item">
                     <div class="thumbnail" data-video-src="./dist/img/scenes/clip-2.mp4" data-toggle="modal" data-target="#videoModal">
-                        <img src="./dist/img/scenes/scene-1.png" class="scene-item"></img>
+                        <img src="./dist/img/scenes/scene-6.png" class="scene-item"></img>
                         <img class="play" src="./dist/img/scenes/play.png" alt="">
                         <span class="scene-description">
                             "Barn on Fire"
@@ -229,7 +229,7 @@
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="videoModalLabel">Video</h5>
+                                <h3 class="modal-title" id="videoModalLabel">Video</h3>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -238,6 +238,11 @@
                                 <video id="modalVideo" class="modal-video" autoplay>
                                     <source src="" type="video/mp4">
                                     Your browser does not support the video tag.
+                                    <div class="controls">
+                                        <div class="controls__progress">
+                                            <div class="controls__progress__filled"></div>
+                                        </div>
+                                    </div>
                                 </video>
                             </div>
                         </div>
@@ -249,7 +254,7 @@
     <footer class="footer">
         <div class="footer__text">
             <h3 class="title">
-                The White Ribbon
+                Das Weisse Band
             </h3>
             <p class="text--small">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -270,6 +275,7 @@
         </div>
     </footer>
 
+    <script src="./src/js/custom-player.js"></script>
     <script>
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -304,22 +310,10 @@
                 modalTitle.innerText = videos[currentVideoIndex].title;
             }
 
-            function playNextVideo() {
-                currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-                updateModalContent();
-            }
-
-            function playPreviousVideo() {
-                currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
-                updateModalContent();
-            }
-
-            nextBtn.addEventListener('click', playNextVideo);
-            prevBtn.addEventListener('click', playPreviousVideo);
-
-            $('#videoModal').on('hidden.bs.modal', function () {
+            $('#videoModal').on('hide.bs.modal', function () {
                 modalVideo.pause();
             });
+
         });
 
     </script>
