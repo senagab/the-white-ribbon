@@ -89,4 +89,36 @@
             @include little-text;
         }
     }
+
+    .roll-down {
+        display: none;
+    }
+}
+
+// mobile
+@media (max-width: 767px) {
+    .hero {
+        background-image: url(../../dist/img/hero/hero-small.png);
+        height: 200vh;
+        min-width: 1024px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: contain;
+
+        &__container {
+            display: none;
+        }
+
+        .roll-down {
+            img {
+                display: block;
+                position: absolute;
+                opacity: .5;
+                top: 170vh;
+                left: 100%;
+            }
+        }
+    }
 }
