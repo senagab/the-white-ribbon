@@ -62,13 +62,17 @@
 // mobile
 @media (max-width: 767px) {
     .about {
+
         &__container {
+            position: relative;
 
             &__ribbons {
                 display: none;
             }
 
             &__ribbons-small {
+                position: absolute;
+                top: 0;
                 display: block;
             }
         }
