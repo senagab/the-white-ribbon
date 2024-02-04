@@ -57,3 +57,25 @@
         }
     }
 }
+
+
+// mobile
+@media (max-width: 767px) {
+    .about {
+        &__container {
+
+            &__ribbons {
+                display: none;
+            }
+
+            &__ribbons-small {
+                display: block;
+            }
+        }
+    }
+}
+
+
+// about__container__ribbons-small
+// about__container__ribbons-small__item
+// ribbon-small
