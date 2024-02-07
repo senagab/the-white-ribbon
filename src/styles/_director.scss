@@ -8,6 +8,7 @@ $textBgColor: #F1ECE9;
 
         &__image {
             width: 100%;
+            min-width: 1024px;
             height: 80vh;
             display: flex;
             justify-content: flex-end;
@@ -27,6 +28,7 @@ $textBgColor: #F1ECE9;
             justify-content: space-between;
             background-color: $textBgColor;
             padding: 30px;
+            min-width: 1024px;
 
             &__left {
                 text-align: left;
@@ -60,5 +62,35 @@ $textBgColor: #F1ECE9;
                 color: #0C0C0C;
             }
         }
+    }
+}
+
+
+// mobile
+@media (max-width: 767px) {
+    .director {
+
+        &__container {
+
+            &__image {
+                height: 120vh;
+            }
+
+            &__text {
+                height: 60vh;
+                justify-content: space-around;
+                flex-direction: column;
+                align-items: center;
+
+                &__right {
+                    border: none;
+                    text-align: center;
+                    max-width: 600px;
+                    width: 100%;
+                }
+            }
+
+        }
+
     }
 }
