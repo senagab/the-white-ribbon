@@ -46,3 +46,25 @@
         }
     }
 }
+
+
+// mobile
+@media (max-width: 767px) {
+    .concept {
+        height: 250vh;
+
+        &__container {
+
+            &__title {
+
+                span:nth-child(2) {
+                    font-size: 30px;
+                }
+    
+                .title {
+                    font-size: 100px;
+                }
+            }
+        }
+    }
+}
