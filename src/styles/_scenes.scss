@@ -89,6 +89,33 @@
 }
 
 
+// mobile
+@media (max-width: 767px) {
+    .scenes {
+        height: 300vh;
+
+        &__container {
+
+            &__title {
+                // code 
+            }
+
+            &__list {    
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 30px;
+                column-gap: 0;
+
+                &__item {
+                    // code 
+                }
+            }
+        }
+
+    }
+}
+
+
 .modal.fade .modal-dialog.modal-dialog-centered {
     display: flex;
     align-items: center;
