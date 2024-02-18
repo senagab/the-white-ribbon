@@ -1,10 +1,10 @@
-# Website "The White Ribbon"
+# The White Ribbon
 
 Bem-vindo ao site oficial dedicado à obra-prima de Michael Haneke, "The White Ribbon".
 
 ## Sobre
 
-"The White Ribbon" é um filme instigante que explora as profundezas da psicologia humana, dirigido com maestria por Michael Haneke. O filme é renomado por sua trama envolvente, cinematografia bela e o conceito único de um horror psicológico latente.
+"The White Ribbon" é um filme provocador que explora as profundezas da psicologia humana numa pequena comunidade alemã [pré-segunda guerra mundial](#), dirigido com maestria por Michael Haneke. O filme é renomado por sua trama envolvente, cinematografia bela e o conceito único de um horror psicológico latente.
 
 ### Informações Principais
 
