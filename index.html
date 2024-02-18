@@ -340,52 +340,43 @@
             //     modalVideo.pause();
             // });
 
-            // video player
-            // var video = document.getElementById('overlay-video');
-            // var overlayContent = document.querySelector('.overlay-content');
-            // var videoPlayed = false;
-
-            // // Play video when it comes into view
-            // var options = {
-            //     root: null,
-            //     rootMargin: '0px',
-            //     threshold: 0.5
-            // };
-
-            // var observer = new IntersectionObserver(function(entries, observer) {
-            //     entries.forEach(function(entry) {
-            //         if (entry.isIntersecting && !videoPlayed) {
-            //             video.play();
-            //             videoPlayed = true;
-
-            //             // Pause the video when it's about to end
-            //             video.addEventListener('timeupdate', function() {
-            //                 if (video.currentTime >= video.duration - 0.1) {
-            //                     video.pause();
-            //                     console.log('Vídeo pausado no último frame.');
-            //                 }
-            //             });
-
-            //             observer.unobserve(entry.target);
-            //         }
-            //     });
-            // }, options);
-
-            // observer.observe(overlayContent);
-
-            // // Log when the video ends
-            // video.addEventListener('ended', function() {
-            //     console.log('Vídeo terminado.');
-            // });
-
             // lottie
+            // Set up the options for the Intersection Observer
+            var options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            // Target the section you want to observe
+            var targetSection = document.getElementById('about');
+
+            // Function to handle the intersection changes
+            function handleIntersection(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        // Start the Lottie animation when the section is in view
+                        animation.play();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }
+
+            // Create an Intersection Observer instance
+            var observer = new IntersectionObserver(handleIntersection, options);
+
+            // Observe the target section
+            observer.observe(targetSection);
+
+            // Load Lottie animation
             var animation = bodymovin.loadAnimation({
                 container: document.getElementById('bm'),
                 renderer: 'svg',
                 loop: false,
-                autoplay: true,
+                autoplay: false, // Set autoplay to false initially
                 path: 'whiteribbon.json'
-            })
+            });
+
 
         });
 
