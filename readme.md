@@ -31,7 +31,7 @@ Este site está sendo desenvolvido utilizando as seguintes tecnologias:
 
 2. Instale as dependências:
     ```bash
-    npm install gulp sass gulp-sass gulp-imagemin@7.1.0
+    npm install --save-dev gulp sass gulp-sass gulp-imagemin@7.1.0
     ```
 
 3. Construa o projeto usando o Gulp:
