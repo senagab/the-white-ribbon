@@ -26,7 +26,7 @@ Este site está sendo desenvolvido utilizando as seguintes tecnologias:
 
 1. Clone o repositório:
     ```bash
-    git clone [https://github.com/senagab/das-weisse-band.git](https://github.com/senagab/das-weisse-band.git)
+    git clone https://github.com/senagab/das-weisse-band.git
     ```
 
 2. Instale as dependências:
