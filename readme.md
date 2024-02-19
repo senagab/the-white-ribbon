@@ -8,9 +8,9 @@ The White Ribbon é um filme provocador que explora as profundezas da psicologia
 
 ### Informações Principais
 
-- **Diretor**: Michael Haneke
-- **Locações de Filmagem**: Alemanha, Austria
-- **Gênero**: Horror Psicológico
+- **Diretor**: Michael Haneke.
+- **Locações de Filmagem**: Alemanha, Austria.
+- **Gênero**: Horror Psicológico.
 
 ## Detalhes do Site
 
@@ -62,4 +62,4 @@ Reviva e discuta os momentos mais memoráveis de "The White Ribbon", explorando 
 
 ## Contribuições
 
-Sinta-se à vontade para explorar, aproveitar e contribuir para a comunidade de "The White Ribbon"!
+Sinta-se à vontade para explorar, aproveitar e contribuir para a comunidade de "The White Ribbon".
