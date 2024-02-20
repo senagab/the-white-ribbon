@@ -13,6 +13,7 @@ function toggleAudio() {
 
     // listen event and update the image to sound-off when audio finishes
     audio.addEventListener('ended', function() {
-        playButton.src = "sound-off.png";
+        audio.play();
+        playButton.src = "./dist/img/icons/sound-on.png"; // troca img
     });
 }
