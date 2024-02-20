@@ -21,6 +21,20 @@
     object-fit: contain;
 
     &__container {
+
+        &__side {
+            position: sticky;
+            top: 42vh;
+
+            .score {
+                position: sticky;
+                left: 10vh;
+                height: 40px;
+                width: 40px;
+                cursor: pointer;
+            }
+        }
+
         margin-top: 10vh;
 
         &__top {
