@@ -4,9 +4,15 @@ function toggleAudio() {
 
     if (audio.paused) {
         audio.play();
-        playButton.src = "./dist/img/icons/sound-on.png"; // Change to sound-on image
+        playButton.src = "./dist/img/icons/sound-on.png"; // troca img
     } else {
         audio.pause();
-        playButton.src = "./dist/img/icons/sound-off.png"; // Change to sound-off image
+        audio.currentTime = 0; // rewind
+        playButton.src = "./dist/img/icons/sound-off.png"; // troca img
     }
+
+    // listen event and update the image to sound-off when audio finishes
+    audio.addEventListener('ended', function() {
+        playButton.src = "sound-off.png";
+    });
 }

@@ -29,6 +29,14 @@
             left: 10vh;
             z-index: 5;
 
+            .separator {    
+                width: 5px;
+                height: 100px;
+                border-left: 4px solid #fff;
+                margin: 20px 10px;
+                border-radius: 100px;
+            }
+
             .socials {
                 display: flex;
                 flex-direction: column;
