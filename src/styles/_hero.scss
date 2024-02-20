@@ -21,6 +21,7 @@
     object-fit: contain;
 
     &__container {
+        margin-top: 3vh;
         position: relative;
 
         &__side {
@@ -54,8 +55,6 @@
 
             }
         }
-
-        margin-top: 10vh;
 
         &__top {
             @include panel;
