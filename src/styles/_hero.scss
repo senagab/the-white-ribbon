@@ -21,17 +21,29 @@
     object-fit: contain;
 
     &__container {
+        position: relative;
 
         &__side {
-            position: sticky;
-            top: 42vh;
+            position: absolute;
+            top: 10vh;
+            left: 10vh;
+            z-index: 5;
 
-            .score {
-                position: sticky;
-                left: 10vh;
-                height: 40px;
-                width: 40px;
+            .socials {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 24px;
+                width: 24px;
+                margin-bottom: 15px;
                 cursor: pointer;
+    
+                .score {
+                    position: sticky;
+                    left: 10vh;
+                    cursor: pointer;
+                }
+
             }
         }
 
@@ -71,6 +83,7 @@
             .text {
                 font-family: 'Inter', serif;
                 letter-spacing: 2px;
+                padding-right: 10px;
             }
         }
 
