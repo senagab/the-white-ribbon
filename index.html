@@ -372,13 +372,13 @@
             // Observe the target section
             observer.observe(targetSection);
 
-            // Load Lottie animation
+            // Load animation
             var animation = bodymovin.loadAnimation({
                 container: document.getElementById('bm'),
                 renderer: 'svg',
                 loop: false,
                 autoplay: false, // Set autoplay to false initially
-                path: 'whiteribbon.json'
+                path: './data/json/whiteribbon.json'
             });
 
         });
