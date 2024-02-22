@@ -56,67 +56,73 @@
             }
         }
 
-        &__top {
-            @include panel;
-            flex-direction: row;
-            justify-content: center;
-            text-align: left;
-            align-items: center;
-
-            .title--big {
-                font-family: 'Tiempos Bold', serif;
-                line-height: 115px;
-            }
-
-            .text {
-                margin-left: 10px;
-                font-family: 'Inter', serif;
-                letter-spacing: 2px;
-            }
-        }
-
-        &__mid {
-            @include panel;
-            text-align: right;
-            justify-content: center;
-            align-items: center;
-
-            .title--big {
-                color: variaveis.$secondaryColor;
-                font-family: 'Tiempos Bold', serif;
-                line-height: 115px;
-            }
-
-            .text {
-                font-family: 'Inter', serif;
-                letter-spacing: 2px;
-                padding-right: 10px;
-            }
-        }
-
-        &__bottom {
-            @include panel;
+        &__title {
+            display: flex;
             flex-direction: column;
-            align-items: flex-end;
-            text-align: right;
-            align-content: center;
+            justify-content: center;
 
-            .title--big {
-                font-family: 'Tiempos Bold', serif;
-                font-size: 155px;
-                line-height: 115px;
+            &__top {
+                @include panel;
+                flex-direction: row;
+                justify-content: center;
+                text-align: left;
+                align-items: center;
+    
+                .title--big {
+                    font-family: 'Tiempos Bold', serif;
+                    line-height: 115px;
+                }
+    
+                .text {
+                    margin-left: 10px;
+                    font-family: 'Inter', serif;
+                    letter-spacing: 2px;
+                }
             }
-
-            span:nth-child(2) {
-                margin-top: 20px;
+    
+            &__mid {
+                @include panel;
+                text-align: right;
+                justify-content: center;
+                align-items: center;
+    
+                .title--big {
+                    color: variaveis.$secondaryColor;
+                    font-family: 'Tiempos Bold', serif;
+                    line-height: 115px;
+                }
+    
+                .text {
+                    font-family: 'Inter', serif;
+                    letter-spacing: 2px;
+                    padding-right: 10px;
+                }
             }
-
-            .text {
-                margin-bottom: 5px;
-                font-family: 'Inter', serif;
-                letter-spacing: 2px;
+    
+            &__bottom {
+                @include panel;
+                flex-direction: column;
+                align-items: flex-end;
+                text-align: right;
+                align-content: center;
+    
+                .title--big {
+                    font-family: 'Tiempos Bold', serif;
+                    font-size: 155px;
+                    line-height: 115px;
+                }
+    
+                span:nth-child(2) {
+                    margin-top: 20px;
+                }
+    
+                .text {
+                    margin-bottom: 5px;
+                    font-family: 'Inter', serif;
+                    letter-spacing: 2px;
+                }
+    
             }
-
         }
         
         .text {
