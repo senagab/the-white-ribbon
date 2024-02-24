@@ -44,7 +44,7 @@ Este site está sendo desenvolvido utilizando as seguintes tecnologias:
     npm run dev
     ```
 
-5. Acesse o site em seu navegador em `http://localhost:3000`.
+5. Utilize a extensão do vscode live server para visualizar em seu navegador.
 
 ## Seções
 
