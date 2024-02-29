@@ -7,13 +7,14 @@
 @use 'footer';
 @use 'about';
 
+$vh: 5;
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;
     color: variaveis.$primaryColor;
 }
 
 @mixin title($fontsize: 42px) {
-    @include text($fontsize);
+    @include text($fontsize * $vh / 100vh);
 }
 
 * {
