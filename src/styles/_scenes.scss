@@ -18,17 +18,24 @@
         &__list {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            row-gap: 24px;
-            column-gap: 24px;
+            row-gap: 15px;
+            column-gap: 15px;
 
             &__item {
                 position: relative;
 
                 .title {
+                    display: flex;
+                    justify-content: center;
                     font-family: 'Tiempos', serif; 
                     font-weight: 700; 
                     font-size: 30px; 
                     line-height: 2rem;
+                    letter-spacing: 7px;
+
+                    &:hover {
+                        background-color: none;
+                    }
                 }
 
                 &:hover {
