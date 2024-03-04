@@ -13,13 +13,6 @@
             justify-content: flex-start;
             align-items: center;
             margin-right: 30px;
-
-            .title {
-                // font-size: 30px !important;
-                font-family: 'tiempos', serif;
-                font-weight: 700;
-                line-height: 2rem;
-            }
         }
 
         &__list {
@@ -30,6 +23,13 @@
 
             &__item {
                 position: relative;
+
+                .title {
+                    font-family: 'Tiempos', serif; 
+                    font-weight: 700; 
+                    font-size: 30px; 
+                    line-height: 2rem;
+                }
 
                 &:hover {
                     background-color: rgba(0, 0, 0, .7);
