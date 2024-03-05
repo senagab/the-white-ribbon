@@ -100,6 +100,33 @@
     }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+    
+    .scenes {
+
+        &__container {
+
+            &__title {
+            }
+
+            &__list {    
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                row-gap: 30px;
+                column-gap: 0;
+
+                &__item {
+                    // code 
+                }
+            }
+        }
+
+    }
+
+
+
+}
+
 
 // mobile
 @media (max-width: 767px) {
