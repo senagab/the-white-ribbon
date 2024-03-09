@@ -40,3 +40,17 @@
     height: 18px;
     width: 18px;
 }
+
+
+// mobile
+@media only screen and (max-width: 767px) {
+    .footer {
+        // padding: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        height: auto;
+        width: 100%;
+    }
+}
