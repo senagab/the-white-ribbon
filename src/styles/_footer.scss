@@ -45,12 +45,18 @@
 // mobile
 @media only screen and (max-width: 767px) {
     .footer {
-        // padding: 300px;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
-        height: auto;
+        height: 70vh;
         width: 100%;
+        min-width: 1024px;
+
+        &__text {
+            .title {
+                font-size: 60px;
+            }
+        }
     }
 }
