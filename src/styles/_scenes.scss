@@ -9,10 +9,11 @@
         align-items: center;
 
         &__title {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            margin-right: 30px;
+            display: none;
+            // display: flex;
+            // justify-content: flex-start;
+            // align-items: center;
+            // margin-right: 30px;
         }
 
         &__list {
@@ -157,6 +158,9 @@
         &__container {
 
             &__title {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
                 font-size: 45px;
                 text-align: center;
             }

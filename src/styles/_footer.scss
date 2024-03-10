@@ -19,6 +19,10 @@
         :nth-child(2) {
             margin-bottom: 0.5rem;
         }
+
+        .text--small {
+            color: #bdbdbd;
+        }
     }
 
     &__socials {
@@ -56,6 +60,21 @@
         &__text {
             .title {
                 font-size: 60px;
+
+                .fade-in {
+                    opacity: 0;
+                    animation: fadeIn 4.5s forwards;
+                }
+            }
+
+            :nth-child(1n), :nth-child(2n) {
+                margin-bottom: 5vh;
+            }
+            
+            @keyframes fadeIn {
+                to {
+                opacity: 1;
+                }
             }
         }
     }
