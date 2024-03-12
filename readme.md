@@ -20,7 +20,7 @@ Este site está sendo desenvolvido utilizando as seguintes tecnologias:
 - **Gulp**: Ferramenta para automatização de tarefas de desenvolvimento.
 - **BEM com SASS**: Metodologia para escrever estilos escaláveis e de fácil manutenção.
 - **JavaScript Vanilla**: Para elementos interativos e dinâmicos.
-- **Lottie**: Biblioteca para Web e iOS que interpreta animações do Adobe After Effects exportadas como JSON com o Bodymovin e as renderiza nativamente em dispositivos móveis.
+- **Lottie**: Biblioteca para Web e iOS que interpreta animações exportadas como JSON com Bodymovin e as renderiza nativamente para dispositivos móveis.
 
 ## Configuração de Desenvolvimento
 
