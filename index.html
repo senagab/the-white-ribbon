@@ -316,7 +316,7 @@
     <footer class="footer">
         <div class="footer__text">
             <h3 class="title">
-                <div class="fade-in">
+                <div class="">
                     White Ribbon
                 </div>
             </h3>
@@ -383,18 +383,22 @@
         //     path: '../data/json/whiteribbon.json'
         // });
 
-        // animação do footer
+        // animação footer
         document.addEventListener('scroll', function() {
-        var footer = document.querySelector('.footer');
-        
-        // Check if the user has scrolled down to the footer
-        if (isElementInViewport(footer)) {
-            footer.classList.add('fade-in');
-        }
+            var footer = document.querySelector('.footer');
+            console.log('esta scrollando');
+            
+            // Log the bounding rectangle of the footer
+            console.log(footer.getBoundingClientRect());
+
+            // Check if the user has scrolled down to the footer
+            if (isElementInViewport(footer)) {
+                console.log('consigo ver a footer');
+            }
         });
 
-        // Function to check if an element is in the viewport
-        function isElementInViewport(element) {
+    // Function to check if an element is in the viewport
+    function isElementInViewport(element) {
         var rect = element.getBoundingClientRect();
         return (
             rect.top >= 0 &&
@@ -402,7 +406,9 @@
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
-        }
+    }
+
+
     </script>
 </body>
 </html>
