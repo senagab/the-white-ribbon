@@ -1,4 +1,4 @@
-# The White Ribbon
+# White Ribbon
 
 Bem-vindo ao site oficial dedicado à obra-prima de Michael Haneke, "The White Ribbon".
 
