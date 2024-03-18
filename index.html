@@ -339,74 +339,49 @@
         </div>
     </footer>
 
-    <script src="./src/js/lottie.js"></script>
     <script src="./src/js/toggle-audio.js"></script>
     <script src="./src/js/modal-clips.js"></script>
     <script src="./src/js/overlay.js"></script>
+    <script src="./src/js/lottie.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         
-        // // lottie
-        // // Set up the options for the Intersection Observer
-        // var options = {
-        //     root: null,
-        //     rootMargin: '0px',
-        //     threshold: 0.5
-        // };
+        // lottie
+        // Set up the options for the Intersection Observer
+        var options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
 
-        // // Target the section you want to observe
-        // var targetSection = document.getElementById('about');
+        // Target the section you want to observe
+        var targetSection = document.getElementById('about');
 
-        // // Function to handle the intersection changes
-        // function handleIntersection(entries, observer) {
-        //     entries.forEach(function(entry) {
-        //         if (entry.isIntersecting) {
-        //             // Start the Lottie animation when the section is in view
-        //             animation.play();
-        //             observer.unobserve(entry.target);
-        //         }
-        //     });
-        // }
+        // Function to handle the intersection changes
+        function handleIntersection(entries, observer) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    // Start the Lottie animation when the section is in view
+                    animation.play();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }
 
-        // // Create an Intersection Observer instance
-        // var observer = new IntersectionObserver(handleIntersection, options);
+        // Create an Intersection Observer instance
+        var observer = new IntersectionObserver(handleIntersection, options);
 
-        // // Observe the target section
-        // observer.observe(targetSection);
+        // Observe the target section
+        observer.observe(targetSection);
 
-        // // Load animation
-        // var animation = bodymovin.loadAnimation({
-        //     container: document.getElementById('bm'),
-        //     renderer: 'svg',
-        //     loop: false,
-        //     autoplay: false, // Set autoplay to false initially
-        //     path: '../data/json/whiteribbon.json'
-        // });
-
-        // animação footer
-        document.addEventListener('scroll', function() {
-            var footer = document.querySelector('.footer');
-            console.log('esta scrollando');
-            
-            // Log the bounding rectangle of the footer
-            console.log(footer.getBoundingClientRect());
-
-            // Check if the user has scrolled down to the footer
-            if (isElementInViewport(footer)) {
-                console.log('consigo ver a footer');
-            }
+        // Load animation
+        var animation = bodymovin.loadAnimation({
+            container: document.getElementById('bm'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false, // Set autoplay to false initially
+            path: '../data/json/whiteribbon.json'
         });
-
-    // Function to check if an element is in the viewport
-    function isElementInViewport(element) {
-        var rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
 
 
     </script>

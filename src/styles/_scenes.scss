@@ -158,14 +158,17 @@
         &__container {
 
             &__title {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                font-size: 45px;
-                text-align: center;
+                display: none;
             }
 
             &__list {    
+
+                .title {
+                    font-size: 56px;
+                    line-height: 4.5rem;
+                    text-align: center;
+                }
+
                 display: grid;
                 grid-template-columns: 1fr;
                 row-gap: 30px;
