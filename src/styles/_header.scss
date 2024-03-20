@@ -64,6 +64,17 @@
 @media (max-width: 767px) {
 
     .header {
+
+        .menu-sm {
+            position: relative;
+            button {
+                margin: 15vh 15vh 0;
+            }
+
+            .nav {
+            }
+        }
+
         &__nav {
             .navbar-toggler {
                 color: white !important;
@@ -73,10 +84,6 @@
     
                 &__list {
 
-                    button {
-                        margin: 20px;
-                        padding: 0;
-                    }
                     nav {
                         .nav {
                             .nav-item {
