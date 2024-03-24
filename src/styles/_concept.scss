@@ -50,6 +50,12 @@
     }
 }
 
+//tablet 
+@media only screen and (min-width:321px) and (max-width:768px) {
+    .concept {
+        height: 160vh;
+    }
+}
 
 // mobile
 @media (max-width: 767px) {
