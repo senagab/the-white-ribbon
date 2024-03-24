@@ -65,6 +65,17 @@ $textBgColor: #F1ECE9;
     }
 }
 
+//tablet
+@media only screen and (min-width:321px) and (max-width:768px) {
+    .director {
+
+        &__container {
+            &__image {
+                height: 72vh;
+            }
+        }
+    }
+}
 
 // mobile
 @media (max-width: 767px) {
