@@ -56,6 +56,40 @@
     width: 18px;
 }
 
+//tablet 
+@media only screen and (min-width:321px) and (max-width:768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        height: 70vh;
+        width: 100%;
+        min-width: 1024px;
+
+        &__text {
+            .title {
+                font-size: 60px;
+
+                .fade-in {
+                    opacity: 0;
+                    animation: fadeIn 4.5s forwards;
+                }
+            }
+
+            :nth-child(1n), :nth-child(2n) {
+                margin-bottom: 5vh;
+            }
+            
+            @keyframes fadeIn {
+                to {
+                opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 
 // mobile
 @media only screen and (max-width: 767px) {
