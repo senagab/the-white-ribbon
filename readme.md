@@ -1,65 +1,65 @@
 # White Ribbon
 
-Bem-vindo ao site oficial dedicado à obra-prima de Michael Haneke, "The White Ribbon".
+Welcome to the official website dedicated to Michael Haneke's masterpiece, "The White Ribbon".
 
-## Sobre
+## About
 
-The White Ribbon é um filme provocador que explora as profundezas da psicologia humana numa pequena comunidade alemã, dirigido com maestria por Michael Haneke. O filme é renomado por sua trama peculiar mimetizando um _whodunnit_, com _mise-en-scène_ preciso e um estudo de personagem em grupo Haneke dá luz a um sútil horror psicológico.
+"The White Ribbon" is a provocative film that delves into the depths of human psychology in a small German community, masterfully directed by Michael Haneke. The film is renowned for its peculiar plot mimicking a whodunit, with precise mise-en-scène and a group character study. Haneke sheds light on subtle psychological horror.
 
-### Informações Principais
+### Key Information
 
-- **Diretor**: Michael Haneke.
-- **Locações de Filmagem**: Alemanha, Austria.
-- **Gênero**: Horror Psicológico.
+- **Director**: Michael Haneke.
+- **Filming Locations**: Germany, Austria.
+- **Genre**: Psychological Horror.
 
-## Detalhes do Site
+## Site Details
 
-Este site está sendo desenvolvido utilizando as seguintes tecnologias:
+This site is being developed using the following technologies:
 
-- **HTML**: Estrutura das páginas web.
-- **Gulp**: Ferramenta para automatização de tarefas de desenvolvimento.
-- **BEM com SASS**: Metodologia para escrever estilos escaláveis e de fácil manutenção.
-- **JavaScript Vanilla**: Para elementos interativos e dinâmicos.
-- **Lottie**: Biblioteca para Web e iOS que interpreta animações exportadas como JSON com Bodymovin e as renderiza nativamente para dispositivos móveis.
+- **HTML**: Structure of web pages.
+- **Gulp**: Tool for automating development tasks.
+- **BEM with SASS**: Methodology for writing scalable and easily maintainable styles.
+- **Vanilla JavaScript**: For interactive and dynamic elements.
+- **Lottie**: Library for Web and iOS that interprets animations exported as JSON with Bodymovin and renders them natively for mobile devices.
 
-## Configuração de Desenvolvimento
+## Development Setup
 
-1. Clone o repositório:
+1. Clone the repository:
     ```bash
     git clone https://github.com/senagab/das-weisse-band.git
     ```
 
-2. Instale as dependências:
+2. Install dependencies:
     ```bash
     npm install --save-dev gulp sass gulp-sass gulp-imagemin@7.1.0
     ```
 
-3. Construa o projeto usando o Gulp:
+3. Build the project using Gulp:
     ```bash
     npm run build
     ```
 
-4. Inicie o servidor de desenvolvimento:
+4. Start the development server:
     ```bash
     npm run dev
     ```
 
-5. Utilize a extensão do vscode live server para visualizar em seu navegador.
+5. Use the VSCode Live Server extension to view it in your browser.
 
-## Seções
+## Sections
 
-### 1. Detalhes do Filme
+### 1. Film Details
 
-Explore informações sobre "The White Ribbon", incluindo locações de filmagem e a visão do diretor.
+Explore information about "The White Ribbon", including filming locations and the director's vision.
 
-### 2. Horror Psicológico Latente
+### 2. Latent Psychological Horror
 
-Descubra o conceito único de um horror psicológico latente que se desenrola no filme, proporcionando uma compreensão mais profunda de sua narrativa.
+Discover the unique concept of latent psychological horror unfolding in the film, providing a deeper understanding of its narrative.
 
-### 3. Momentos Memoráveis
+### 3. Memorable Moments
 
-Reviva e discuta os momentos mais memoráveis de "The White Ribbon", explorando as cenas impactantes que permanecem na mente do público.
+Relive and discuss the most memorable moments of "The White Ribbon", exploring impactful scenes that linger in the audience's minds.
 
-## Contribuições
+## Contributions
 
-Sinta-se à vontade para explorar, aproveitar e contribuir para a comunidade de "The White Ribbon".
+Feel free to explore, enjoy, and contribute to "The White Ribbon" community.
