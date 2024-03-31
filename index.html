@@ -377,10 +377,10 @@
         // Espera que o DOM esteja carregado
         document.addEventListener("DOMContentLoaded", function() {
             // Obtém o elemento do menu pelo ID
-            var menu = document.getElementById("nav-link");
-    
-            // Adiciona um evento de clique ao menu
-            menu.addEventListener("click", function(event) {
+            var link = document.getElementsByClassName("nav-link");
+            var menu = document.getElementById("menu-nav");
+            
+            link.addEventListener("click", function(event) {
                 // Verifica se o elemento clicado é um link do menu
                 // Adiciona a classe 'hidden.bs.collapse' ao menu
                 menu.classList.add("hidden.bs.collapse");
