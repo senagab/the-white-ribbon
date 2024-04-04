@@ -119,6 +119,16 @@
     .scenes {
 
         &__container {
+            display: flex;
+            flex-direction: column;
+
+            &__title {
+                display: block;
+                font-family: 'tiempos';
+                text-align: center;
+                margin-bottom: 4rem;
+                letter-spacing: 4px;
+            }
 
             &__list {    
                 display: grid;
@@ -140,6 +150,10 @@
                         // &:nth-child(4) {
                         //     display: block !important;
                         // }
+                    }
+
+                    .item_1 {
+                        display: none;
                     }
 
                     .item_4 {
