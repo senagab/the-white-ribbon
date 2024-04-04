@@ -120,9 +120,6 @@
 
         &__container {
 
-            &__title {
-            }
-
             &__list {    
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -130,7 +127,8 @@
                 column-gap: 30px;
 
                     &__item {
-                        // code 
+                        // code
+
                         h3 {
                             padding: 0 !important;
                         }
@@ -144,9 +142,9 @@
                         // }
                     }
 
-                    // .item-6 {
-                    //         display: none;
-                    // }
+                    .item_4 {
+                        display: none;
+                    }
                 }
             }
         }
