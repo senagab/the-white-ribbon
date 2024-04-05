@@ -3,13 +3,14 @@
 .header {
     position: sticky;
     top: 0;
-    left: 0;
     background-color:variaveis.$transparent;
+    transition: background-color 0.3s ease;
     z-index: 999 !important;
 
     &__nav {
-        padding: 25px 70px;
-        background: rgba(12, 12, 12, 0);
+        padding: 25px 70px 0;
+        // background: rgba(12, 12, 12, 0);
+        background-color: #121212;
         
         .menu {
             display: flex;
