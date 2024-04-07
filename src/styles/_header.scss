@@ -8,13 +8,14 @@
     z-index: 999 !important;
 
     &__nav {
-        padding: 25px 70px 0;
+        padding: 25px 70px 15px;
         // background: rgba(12, 12, 12, 0);
         background-color: #121212;
         
         .menu {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 0;
 
             &__list {
                 display: flex;
