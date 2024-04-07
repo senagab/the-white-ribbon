@@ -8,9 +8,10 @@
     z-index: 999 !important;
 
     &__nav {
-        padding: 25px 70px 15px;
+        padding: 15px 70px 10px;
         // background: rgba(12, 12, 12, 0);
-        background-color: #121212;
+        background-color: #0b0b0b;
+        // background-color: transparent;
         
         .menu {
             display: flex;
@@ -19,7 +20,7 @@
 
             &__list {
                 display: flex;
-                align-items: baseline;
+                align-items: center;
                 font-family: 'Tiempos';
 
                 .navbar-toggler{

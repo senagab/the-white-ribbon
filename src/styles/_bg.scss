@@ -1,0 +1,14 @@
+@use 'variaveis';
+
+.background-header-hero {
+    position: relative;
+    z-index: 1;
+    background-image: url('../../dist/img/hero/hero.png');
+    height: 120vh;
+    min-width: 1024px;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
+}

@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
-    <header class="header"> 
+
+    <header class="header" id="header"> 
         <div class="menu-sm">
             <button class="navbar-toggler d-sm-block d-md-none" data-bs-toggle="collapse" data-bs-target="#menu-nav">
                 <img src="../../dist/img/header/hamburger.png" alt="">
@@ -81,6 +82,7 @@
         </div>
     </header>
 
+
     <section id="hero" class="hero">
         <div class="hero__container">
             <div class="hero__container__side">
@@ -129,6 +131,8 @@
         </div>
     </section>
     
+    <div data-bs-spy="scroll" data-bs-target="header" data-bs-smooth-scroll="true"></div>
+
     <section id="about" class="about">
         <div class="about__container">
             <div class="ribbon-wrapper">

@@ -6,6 +6,7 @@
 @use 'scenes';
 @use 'footer';
 @use 'about';
+@use 'bg';
 
 @mixin text($fontsize: 18px) {
     font-size: $fontsize;
