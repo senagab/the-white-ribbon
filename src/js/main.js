@@ -60,7 +60,7 @@ const animation = bodymovin.loadAnimation({
     renderer: 'svg',
     loop: false,
     autoplay: false,
-    path: '../data/json/whiteribbon.json'
+    path: '../../data/json/whiteribbon.json'
 });
 
 // Mobile Menu

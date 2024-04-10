@@ -75,6 +75,10 @@
 
     .header {
 
+        &__nav {
+            display: none;
+        }
+
         .menu-sm {
             position: relative;
             button {
