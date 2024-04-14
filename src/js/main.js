@@ -63,13 +63,13 @@ const animation_mobile = bodymovin.loadAnimation({
     path: 'data/json/whiteribbon.json'
 });
 
-const animation_desktop = bodymovin.loadAnimation({
-    container: document.getElementById('bm'),
-    renderer: 'svg',
-    loop: false,
-    autoplay: false,
-    path: 'data/json/whiteribbon.json'
-});
+// const animation_desktop = bodymovin.loadAnimation({
+//     container: document.getElementById('ribbon'),
+//     renderer: 'svg',
+//     loop: false,
+//     autoplay: false,
+//     path: 'data/json/whiteribbon.json'
+// });
 
 // // Mobile Menu
 // document.addEventListener("DOMContentLoaded", function() {
