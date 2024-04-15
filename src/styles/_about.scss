@@ -25,34 +25,43 @@
         }
 
         &__ribbons {
+            position: relative;
+
+            #ribbon {
+                position: absolute;
+                top: -100px;
+                width: 100em;
+                height: 130vh;
+                z-index: 998;
+            }
 
             &__item {
                 position: relative;
 
-                .ribbon-1 {
-                    @include ribbon();
-                    top: -50px;
-                }
+                // .ribbon-1 {
+                //     @include ribbon();
+                //     top: -50px;
+                // }
 
-                .ribbon-2 {
-                    @include ribbon();
-                    top: 100px
-                }
+                // .ribbon-2 {
+                //     @include ribbon();
+                //     top: 100px
+                // }
 
-                .ribbon-3 {
-                    @include ribbon();
-                    top: 230px
-                }
+                // .ribbon-3 {
+                //     @include ribbon();
+                //     top: 230px
+                // }
 
-                .ribbon-4 {
-                    @include ribbon();
-                    top: 400px
-                }
+                // .ribbon-4 {
+                //     @include ribbon();
+                //     top: 400px
+                // }
 
-                .ribbon-5 {
-                    @include ribbon();
-                    top: 500px
-                }
+                // .ribbon-5 {
+                //     @include ribbon();
+                //     top: 500px
+                // }
             }
         }
 
