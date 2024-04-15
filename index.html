@@ -402,7 +402,8 @@
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     // Start the Lottie animation when the section is in view
-                    animation.play();
+                    animation_desktop.play();
+                    animation_mobile.play();
                     observer.unobserve(entry.target);
                 }
             });
@@ -414,8 +415,17 @@
         // Observe the target section
         observer.observe(targetSection);
 
-        // Load animation
-        var animation = bodymovin.loadAnimation({
+        // load animation mobile
+        const animation_mobile = bodymovin.loadAnimation({
+            container: document.getElementById('bm'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false,
+            path: '../data/json/whiteribbon.json'
+        });
+
+        // Load animation desktop
+        var animation_desktop = bodymovin.loadAnimation({
             container: document.getElementById('ribbon'),
             renderer: 'svg',
             loop: false,
