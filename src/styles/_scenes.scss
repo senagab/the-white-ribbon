@@ -41,7 +41,7 @@
                 }
 
                 .scene-item {
-                    height: 20em;
+                    height: 100%;
                     width: 100%;
                     background-size: cover;
                 }
@@ -190,7 +190,10 @@
                 column-gap: 0;
 
                 &__item {
-                    // code 
+                    .scene-item {
+                        height: 20em;
+                        width: 100%;
+                    }
                 }
             }
         }
