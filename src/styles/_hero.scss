@@ -149,6 +149,29 @@
         background-size: cover;
         object-fit: contain;
 
+        .menu-sm {
+            position: relative;
+            button {
+                margin: 15vh 15vh 0;
+            }
+
+            .nav {
+                .nav-link {
+                    font-size: 40px;
+                    background-color: white;
+                    text-align: center;
+                    color: #1f1f1f;
+                    font-weight: 700;
+                    letter-spacing: 0.2rem;
+                    font-family: 'Tiempos Semibold';
+                    line-height: 2em;
+                    margin: 15px 0;
+                    width: 72%;
+                    margin-left: 15vh;
+                }
+            }
+        }
+
         &__container {
             
             &__side {
@@ -160,7 +183,7 @@
                 align-content: center;
                 align-items: flex-start;
                 flex-wrap: wrap;
-                padding: 70vh 0 10vh;
+                padding: 50vh 0 10vh;
 
                 &__top {
                     
