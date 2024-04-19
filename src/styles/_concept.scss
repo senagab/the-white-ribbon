@@ -3,7 +3,7 @@
 .concept {
     // background-image: url(../img/concept/concept.png);
     // background-image: url(../img/concept/overlay.png);
-    height: 100vh;
+    // height: 120vh;
     min-width: 1024px;
     width: 100%;
     // padding-top: -30vh;
@@ -12,46 +12,51 @@
     align-items: center;
 
     &__container {
+        position: relative;
+        display: flex;    
+        justify-content: center;    
+        align-items: center;    
+        height: 120vh;    
+        width: 100vw;    
+        cursor: none;  
 
-        img {
+        div > img {
             width: 100%;
-            max-width: 2560px;
-            height: 70vh;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+            min-width: 1128px;
+            height: 120vh;
         }
         
 
         #fundo{    
             background-color: rgb(255, 255, 255);    
             color: rgb(29, 29, 29);    
-            /* filter: drop-shadow(16px 16px 20px rgb(0, 0, 0)); */
+            // filter: drop-shadow(16px 16px 20px rgb(0, 0, 0));
 
         }   
 
         #frente {    
             background-color: rgb(29, 29, 29);    
-            color: black; 
             position: absolute;    
             top: 0;    
             left: 0;    
         }
 
-        #frente > .container-text {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            width: 50vw;
-            text-align: center;
-        }
+        // .container-text {
+        //     position: relative;
+        //     display: flex;
+        //     flex-direction: column;
+        //     flex-wrap: wrap;
+        //     justify-content: center;
+        //     align-items: center;
+        //     width: 50vw;
+        //     text-align: center;
+        // }
 
-        h1, span, p {
-            color: white;
-        }
+        // h1, span, p {
+        //     color: white;
+        // }
+
+
         // padding: 170px 160px;
         // text-align: center;
 
