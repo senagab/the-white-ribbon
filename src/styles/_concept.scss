@@ -102,9 +102,40 @@
 // mobile
 @media (max-width: 767px) {
     .concept {
+        background-image: url(../img/concept/concept.png);
+        min-width: 1024px;
+        width: 100%;
+        // padding-top: -30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #frente {
+            display: none;
+        }
+
+        #fundo {
+            display: none;
+        }
+    
         height: 200vh;
 
         &__container {
+            padding: 170px 160px;
+            text-align: center;
+    
+            &__text {
+                display: flex;
+                justify-content: space-between;
+                max-width: 700px;
+    
+                .text--small {
+                    width: 200px;
+                    letter-spacing: 2px;
+                    text-wrap: wrap;
+                    margin: auto 35px;
+                }
+            }
 
             &__title {
 
