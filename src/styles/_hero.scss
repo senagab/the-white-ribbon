@@ -236,13 +236,15 @@
             }
         }
 
-        .roll-down {
-            img {
-                display: block;
-                position: absolute;
-                opacity: .5;
-                top: 170vh;
-                left: 100%;
+        .slide-container {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            padding: 35vh 0 2vh ;
+
+            svg {
+                width: 10vh;
+                height: 10vh;
             }
         }
     }
