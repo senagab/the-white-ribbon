@@ -1,52 +1,89 @@
 @use 'variaveis';
 
 .concept {
-    background-image: url(../img/concept/concept.png);
+    // background-image: url(../img/concept/concept.png);
     // background-image: url(../img/concept/overlay.png);
     height: 100vh;
     min-width: 1024px;
     width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     // padding-top: -30vh;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &__container {
-        padding: 170px 160px;
-        text-align: center;
 
-        &__title {
-            margin-bottom: 5em;
+        img {
+            width: 100%;
+            max-width: 2560px;
+            height: 70vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
 
-            span:nth-child(2) {
-                font-family: 'Inter Bold';
-                color: variaveis.$secondaryColor;
-                letter-spacing: 3px;
-            }
+        #fundo{    
+            background-color: rgb(255, 255, 255);    
+            color: rgb(29, 29, 29);    
+            /* filter: drop-shadow(16px 16px 20px rgb(0, 0, 0)); */
 
-            .title {
-                font-family: 'Tiempos', serif;
-                font-weight: 400;
-                font-size: 72px;
-                line-height: 5rem;
-            }
+        }   
+
+        #frente {    
+            background-color: rgb(29, 29, 29);    
+            color: black; 
+            position: absolute;    
+            top: 0;    
+            left: 0;    
         }
 
-        &__text {
+        #frente > .container-text {
+            position: absolute;
             display: flex;
-            justify-content: space-between;
-            max-width: 700px;
-
-            .text--small {
-                width: 200px;
-                letter-spacing: 2px;
-                text-wrap: wrap;
-                margin: auto 35px;
-            }
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 50vw;
+            text-align: center;
         }
+
+        h1, span, p {
+            color: white;
+        }
+        // padding: 170px 160px;
+        // text-align: center;
+
+        // &__title {
+        //     margin-bottom: 5em;
+
+        //     span:nth-child(2) {
+        //         font-family: 'Inter Bold';
+        //         color: variaveis.$secondaryColor;
+        //         letter-spacing: 3px;
+        //     }
+
+        //     .title {
+        //         font-family: 'Tiempos', serif;
+        //         font-weight: 400;
+        //         font-size: 72px;
+        //         line-height: 5rem;
+        //     }
+        // }
+
+        // &__text {
+        //     display: flex;
+        //     justify-content: space-between;
+        //     max-width: 700px;
+
+        //     .text--small {
+        //         width: 200px;
+        //         letter-spacing: 2px;
+        //         text-wrap: wrap;
+        //         margin: auto 35px;
+        //     }
+        // }
     }
 }
 
