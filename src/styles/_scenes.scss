@@ -178,7 +178,14 @@
             align-content: center;
 
             &__title {
-                display: none;
+                display: block;
+
+                .title {
+                    font-size: 4em !important;
+                    color: #fff;
+                    line-height: 2em;
+                    width: 8em;
+                }
             }
 
             &__list {    
