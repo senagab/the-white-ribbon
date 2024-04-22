@@ -7,11 +7,14 @@
     align-items: center;    
     height: 100vh;    
     width: 100%;    
-    // cursor: none;
+    cursor: none;
 
     #fundo {
         background-color: rgb(255, 255, 255);    
-        color: rgb(29, 29, 29);    
+        color: rgb(29, 29, 29);  
+        position: absolute;    
+        top: 0;    
+        left: 0;   
         /* filter: drop-shadow(16px 16px 20px rgb(0, 0, 0)); */
     }
     
@@ -32,6 +35,7 @@
         left: 0; 
     }
     
+
     .overlay {
         background-image: url(../../dist/img/concept/overlay.png);
         background-size: cover;
