@@ -159,44 +159,8 @@
     </section>
     
     <section id="concept" class="concept">
-        <div class="concept__container">
-
-            <div id="fundo">
-                <img src="./dist/img/concept/background.png" alt="">
-            </div>
-            <div id="frente">
-                <img src="./dist/img/concept/overlay.png" alt="">
-            </div> 
-            <!-- <div class="container-text">
-                <h1>the quintessence</h1>
-                <span>of psychological horror</span>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam eaque placeat quidem 
-                    ipsam possimus sequi ex consectetur repellendus tempore atque ipsa alias, accusantium 
-                    error ab quo temporibus fugiat iure quas.
-                </p>
-            </div> -->
-            
-            <!-- <div class="concept__container__title">
-                <h3 class="title">
-                    THE <br>
-                    QUINTESSENCE
-                </h3>
-                <span class="text--big">
-                    OF PSYCHOLOGICAL HORROR
-                </span>
-            </div>
-            <div class="concept__container__text">
-                <span class="text--small left">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, officiis ad. Sunt, impedit in! Quibusdam maiores harum, aut, obcaecati inventore maxime at debitis reiciendis officiis consequuntur sequi eos provident nulla. Quibusdam maiores harum, aut, obcaecati inventore maxime at debitis reiciendis officiis consequuntur sequi eos provident nulla.
-                </span>
-                <span class="text--small">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, officiis ad. Sunt, impedit in! Quibusdam maiores harum, aut, obcaecati inventore maxime at debitis reiciendis officiis consequuntur sequi eos provident nulla. Quibusdam maiores harum, aut, obcaecati inventore maxime at debitis reiciendis officiis consequuntur sequi eos provident nulla.
-                </span>
-                <span class="text--small right">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, officiis ad. Sunt, impedit in! Quibusdam maiores harum, aut, obcaecati inventore maxime at debitis reiciendis officiis consequuntur sequi eos provident nulla. Quibusdam maiores harum, aut, obcaecati inventore maxime at debitis reiciendis officiis consequuntur sequi eos provident nulla.
-                </span>
-            </div> -->
-        </div>
+        <div id="fundo" class="background"></div>
+        <div id="frente" class="overlay"></div> 
     </section>
 
     <!-- <script>
@@ -380,7 +344,7 @@
         </div>
     </footer>
 
-    <script src="./src/js/main.js"></script>
+    <!-- <script src="./src/js/main.js"></script> -->
     <!-- <script src="./src/js/toggle-audio.js"></script>
     <script src="./src/js/modal-clips.js"></script>
     <script src="./src/js/overlay.js"></script>
@@ -389,62 +353,71 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
-        // lottie
-        // Set up the options for the Intersection Observer
-        var options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
+        let frente = document.getElementById("frente")
 
-        // Target the section you want to observe
-        var targetSection = document.getElementById('about');
+        document.addEventListener('mousemove', (event) =>{
+            let  x  =  event.pageX  +  "px";
+            let  y  =  event.pageY  +  "px";
+            // frente.style.webkitMaskImage  =  radial-gradient(circle at ${x}  ${y}, transparent 55px, black 0%);
+            frente.style.maskImage = `radial-gradient(circle at ${x} ${y}, rgba(255, 255, 255, 0.7) 1px, white 10%)`;
+        })
+        
+        // // lottie
+        // // Set up the options for the Intersection Observer
+        // var options = {
+        //     root: null,
+        //     rootMargin: '0px',
+        //     threshold: 0.5
+        // };
 
-        // Function to handle the intersection changes
-        function handleIntersection(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    // Start the Lottie animation when the section is in view
-                    animation_desktop.play();
-                    animation_mobile.play();
-                    animation_slide.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }
+        // // Target the section you want to observe
+        // var targetSection = document.getElementById('about');
 
-        // Create an Intersection Observer instance
-        var observer = new IntersectionObserver(handleIntersection, options);
+        // // Function to handle the intersection changes
+        // function handleIntersection(entries, observer) {
+        //     entries.forEach(function(entry) {
+        //         if (entry.isIntersecting) {
+        //             // Start the Lottie animation when the section is in view
+        //             animation_desktop.play();
+        //             animation_mobile.play();
+        //             animation_slide.play();
+        //             observer.unobserve(entry.target);
+        //         }
+        //     });
+        // }
 
-        // Observe the target section
-        observer.observe(targetSection);
+        // // Create an Intersection Observer instance
+        // var observer = new IntersectionObserver(handleIntersection, options);
 
-        // load animation mobile
-        const animation_mobile = bodymovin.loadAnimation({
-            container: document.getElementById('bm'),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: '../data/json/whiteribbon.json'
-        });
+        // // Observe the target section
+        // observer.observe(targetSection);
 
-        // Load animation desktop
-        var animation_desktop = bodymovin.loadAnimation({
-            container: document.getElementById('ribbon'),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false, // Set autoplay to false initially
-            path: '../data/json/whiteribbon-desktop.json'
-        });
+        // // load animation mobile
+        // const animation_mobile = bodymovin.loadAnimation({
+        //     container: document.getElementById('bm'),
+        //     renderer: 'svg',
+        //     loop: false,
+        //     autoplay: false,
+        //     path: '../data/json/whiteribbon.json'
+        // });
 
-        // Load animation hero (slide down)
-        var animation_slide = bodymovin.loadAnimation({
-            container: document.getElementById('slide'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true, // Set autoplay to false initially
-            path: '../data/json/sliding-down.json'
-        });
+        // // Load animation desktop
+        // var animation_desktop = bodymovin.loadAnimation({
+        //     container: document.getElementById('ribbon'),
+        //     renderer: 'svg',
+        //     loop: false,
+        //     autoplay: false, // Set autoplay to false initially
+        //     path: '../data/json/whiteribbon-desktop.json'
+        // });
+
+        // // Load animation hero (slide down)
+        // var animation_slide = bodymovin.loadAnimation({
+        //     container: document.getElementById('slide'),
+        //     renderer: 'svg',
+        //     loop: true,
+        //     autoplay: true, // Set autoplay to false initially
+        //     path: '../data/json/sliding-down.json'
+        // });
 
 
     </script>

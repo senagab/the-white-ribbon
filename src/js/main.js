@@ -104,11 +104,11 @@
 //     });
 // }
 
-let  frente  =  document.getElementById("frente")
+// let  frente  =  document.getElementById("frente")
 
-document.addEventListener('mousemove', (event) =>{
-    let  x  =  event.pageX  +  "px";
-    let  y  =  event.pageY  +  "px";
-    // frente.style.webkitMaskImage  =  radial-gradient(circle at ${x}  ${y}, transparent 55px, black 0%);
-    frente.style.maskImage = `radial-gradient(circle at ${x} ${y}, rgba(255, 255, 255, 0.7) 1px, white 10%)`;
-})
+// document.addEventListener('mousemove', (event) =>{
+//     let  x  =  event.pageX  +  "px";
+//     let  y  =  event.pageY  +  "px";
+//     // frente.style.webkitMaskImage  =  radial-gradient(circle at ${x}  ${y}, transparent 55px, black 0%);
+//     frente.style.maskImage = `radial-gradient(circle at ${x} ${y}, rgba(255, 255, 255, 0.7) 1px, white 10%)`;
+// })
