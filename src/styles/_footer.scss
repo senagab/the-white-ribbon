@@ -1,59 +1,173 @@
 .footer {
-    height: 40vh;
-    padding: 44px 380px;
+    height: 60vh;
+    padding: 60px 100px;
     background-color: #000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    font-family: 'tiempos', serif;
+    color: rgb(212, 212, 212);
 
-    &__text {
-        display: block;
-        text-align: center;
+    &__container {
 
-        :nth-child(1) {
-            margin-bottom: 10px;
-            font-family: 'Tiempos Bold';
-            letter-spacing: -1px;
-
-            .fade-in {
-                opacity: 0;
-                animation: fadeIn 4.5s forwards;
-            }
-        }
-            
-        @keyframes fadeIn {
-            to {
-            opacity: 1;
-            }
-        }
-
-        :nth-child(2) {
-            margin-bottom: 0.5rem;
-        }
-
-        .text--small {
-            color: #bdbdbd;
-        }
-    }
-
-    &__socials {
-
-        &__list {
+        &__top {
             display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 5em;
+            
+            &__left {
+                display: flex;
+                flex-direction: column;
+                
+                .socials {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    margin-bottom: 15px;
+    
+                    &-item {
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-position: center;
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 15px;
+                        opacity: .8;
 
-            &__item {
-                margin-right: 15px;
+                        &:hover {
+                            opacity: 1;
+                            cursor: pointer;
+                        }
+                    }
+    
+                    &-mubi {
+                        background-image: url(../../dist/img/footer/mubi.png);
+                    }
+    
+                    &-instagram {
+                    background-image: url(../../dist/img/footer/instagram.png);
+                    }
+    
+                    &-youtube {
+                    background-image: url(../../dist/img/footer/youtube.png);
+                    }
+                }
+
+                .slogan {
+                    font-size: 15px;
+                    margin-bottom: 5px;
+                    color: white;
+                }
+
+                .dev {
+                    font-size: .8rem;
+
+                    a {
+                        text-decoration: none;
+                        color: #D1CDC7;
+                    }
+                }
+            }
+
+            &__right {
+                .footer-links {
+                    display: flex;
+
+                    .lista-links {
+                        list-style: none;
+
+                        .link {
+                            margin-bottom: 20px;
+                            font-size: 14px;
+                            font-weight: 400;
+
+                            a {
+                                color: rgb(209, 209, 209);
+                                text-decoration: none;
+
+                                &:hover {
+                                    color: white;
+                                }
+                            }
+
+                            .hover {
+                                display: inline-block;
+                                position: relative;
+                                color: #fff;
+                            }
+                            
+                            .hover::after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                transform: scaleX(0);
+                                height: 2px;
+                                bottom: 0;
+                                left: 0;
+                                background-color: #fff;
+                                transform-origin: bottom right;
+                                transition: transform 0.35s ease-out;
+                            }
+                            
+                            .hover:hover::after {
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .award-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 5em;
+
+            .award {
+                background-image: url(../../dist/img/footer/palm-dor.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 9vw;
+                height: 4vh;
+            }
+        }
+
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+
+            &__left {
+                h4 {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    letter-spacing: -.02em;
+                    margin-bottom: 2px;
+                }
+
+                .city {
+                    font-size: 14px;
+                    display: flex;
+                }
+            }
+
+            &__right {
+
+
+                .details {
+                    font-size: 14px;
+
+                    .email {
+                        padding-right: 40px;
+
+                        a {
+                            color: inherit;
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
     }
-}
-
-.social {
-    height: 18px;
-    width: 18px;
 }
 
 //tablet 
