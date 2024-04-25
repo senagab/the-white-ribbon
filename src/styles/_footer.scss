@@ -1,9 +1,10 @@
 .footer {
-    height: 60vh;
-    padding: 60px 100px;
+    height: 80vh;
     background-color: #000;
+    width: 100%;
     font-family: 'tiempos', serif;
     color: rgb(212, 212, 212);
+    padding: 100px;
 
     &__container {
 
@@ -127,16 +128,20 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                width: 9vw;
-                height: 4vh;
+                display: block;
+                width: 100%;
+                max-width: 300px;
+                height: auto;;
             }
         }
 
         &__bottom {
             display: flex;
             justify-content: space-between;
+            // margin-bottom: 4em;
 
             &__left {
+
                 h4 {
                     text-transform: uppercase;
                     font-weight: 700;
@@ -152,12 +157,15 @@
 
             &__right {
 
-
                 .details {
                     font-size: 14px;
 
                     .email {
                         padding-right: 40px;
+
+                        &:hover {
+                            color: white;
+                        }
 
                         a {
                             color: inherit;
