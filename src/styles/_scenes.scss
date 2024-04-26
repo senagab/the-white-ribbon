@@ -137,7 +137,11 @@
                 column-gap: 30px;
 
                     &__item {
-                        // code
+                        .thumbnail {
+                            h3.title {
+                                font-size: 18px !important;
+                            }
+                        }
 
                         h3 {
                             padding: 0 !important;
