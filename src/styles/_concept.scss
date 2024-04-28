@@ -9,16 +9,17 @@
     width: 100%;    
     cursor: none;
 
-    #fundo {
-        background-color: rgb(255, 255, 255);    
-        color: rgb(29, 29, 29);  
-        position: absolute;    
-        top: 0;    
-        left: 0;   
-        /* filter: drop-shadow(16px 16px 20px rgb(0, 0, 0)); */
-    }
+    // #background {
+    //     background-color: rgb(255, 255, 255);    
+    //     color: rgb(29, 29, 29);  
+    //     position: absolute;    
+    //     top: 0;    
+    //     left: 0;   
+    //     /* filter: drop-shadow(16px 16px 20px rgb(0, 0, 0)); */
+    // }
     
     .background {
+        position: absolute;
         background-image: url(../../dist/img/concept/background.png);
         background-size: cover;
         background-position: center;
@@ -27,14 +28,13 @@
         height: 100vh;
     }
 
-    #frente {
-        background-color: rgb(29, 29, 29);    
-        color: black; 
-        position: absolute;    
-        top: 0;    
-        left: 0; 
-    }
-    
+    // #overlay {
+    //     background-color: rgb(29, 29, 29);    
+    //     color: black; 
+    //     position: absolute;    
+    //     top: 0;    
+    //     left: 0; 
+    // }
 
     .overlay {
         background-image: url(../../dist/img/concept/overlay.png);
@@ -43,6 +43,18 @@
         background-repeat: no-repeat;
         width: 100vw;
         height: 100vh;
+        z-index: 9;
+    }
+
+    #cursor {
+        position: absolute;
+        width: 20px; /* Adjust size as needed */
+        height: 20px; /* Adjust size as needed */
+        border-radius: 50%;
+        background: radial-gradient(circle, white, transparent);
+        pointer-events: none;
+        mix-blend-mode: screen;
+        transition: transform 0.1s ease;
     }
 }
 
