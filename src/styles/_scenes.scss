@@ -1,4 +1,9 @@
 .scenes {  
+    background-image: url('../../dist/img/scenes/bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: contain;
     height: 100%;
     width: 100%;
     min-width: 1024px;
@@ -28,15 +33,20 @@
                 .title {
                     display: flex;
                     justify-content: center;
-                    font-family: 'Tiempos', serif; 
+                    padding: 32px 0;
                     font-weight: 700; 
                     font-size: 30px; 
                     line-height: 2rem;
-                    letter-spacing: 7px;
-                    padding: 32px 0;
+                    letter-spacing: 18px;
+                    text-transform: uppercase;
+                    font-family: 'Tiempos', serif; 
 
                     &:hover {
                         background-color: none;
+                    }
+
+                    .rotten {
+                        color: #fbffcd;
                     }
                 }
 

@@ -1,114 +1,145 @@
-// // Modals
-// const thumbnailElements = document.querySelectorAll('.thumbnail');
-// const videoModal = document.getElementById('videoModal');
-// const modalVideo = document.getElementById('modalVideo');
-// const modalTitle = document.getElementById('videoModalLabel');
-// const prevBtn = document.getElementById('prevBtn');
-// const nextBtn = document.getElementById('nextBtn');
+// efeito seção 'revelador de background' | concept
+$(document).ready(function() {
+    $('#concept').mousemove(function(event) {
+        var mouseX = event.pageX - $(this).offset().left;
+        var mouseY = event.pageY - $(this).offset().top;
+        
+        // Adjust the size and position of the lighting effect
+        var lightSize = 100; // adjust the size of the lighting effect
+        var lightX = mouseX - lightSize / 2;
+        var lightY = mouseY - lightSize / 2;
+        
+        // Apply the lighting effect to the overlay
+        $('#overlay').css({
+            '-webkit-mask-image': '-webkit-gradient(radial, ' + mouseX + ' ' + mouseY + ', 10, ' + lightX + ' ' + lightY + ', ' + lightSize + ', from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))',
+            'mask-image': 'radial-gradient(circle at ' + mouseX + 'px ' + mouseY + 'px, rgba(255,255,255,.01) 0%, rgba(255,255,255,1) ' + lightSize + 'px)'
+        });
+    });
+});
 
-// let currentVideoIndex = 0;
-// let videos = [];
+// Modals
+const thumbnailElements = document.querySelectorAll('.thumbnail');
+const videoModal = document.getElementById('videoModal');
+const modalVideo = document.getElementById('modalVideo');
+const modalTitle = document.getElementById('videoModalLabel');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
 
-// thumbnailElements.forEach(function (thumbnail, index) {
-//     const videoSrc = thumbnail.dataset.videoSrc;
-//     const videoTitle = thumbnail.querySelector('.scene-description').innerText;
+let currentVideoIndex = 0;
+let videos = [];
 
-//     videos.push({
-//         src: videoSrc,
-//         title: videoTitle
-//     });
+thumbnailElements.forEach(function (thumbnail, index) {
+    const videoSrc = thumbnail.dataset.videoSrc;
+    const videoTitle = thumbnail.querySelector('.scene-description').innerText;
 
-//     thumbnail.addEventListener('click', function () {
-//         currentVideoIndex = index;
-//         updateModalContent();
-//         $('#videoModal').modal('show');
-//     });
-// });
+    videos.push({
+        src: videoSrc,
+        title: videoTitle
+    });
 
-// function updateModalContent() {
-//     modalVideo.src = videos[currentVideoIndex].src;
-//     modalTitle.innerText = videos[currentVideoIndex].title;
-// }
+    thumbnail.addEventListener('click', function () {
+        currentVideoIndex = index;
+        updateModalContent();
+        $('#videoModal').modal('show');
+    });
+});
 
-// $('#videoModal').on('hide.bs.modal', function () {
-//     modalVideo.pause();
-// });
+function updateModalContent() {
+    modalVideo.src = videos[currentVideoIndex].src;
+    modalTitle.innerText = videos[currentVideoIndex].title;
+}
 
-// // Lottie
-// const options = {
+$('#videoModal').on('hide.bs.modal', function () {
+    modalVideo.pause();
+});
+        
+// // lottie
+// // Set up the options for the Intersection Observer
+// var options = {
 //     root: null,
 //     rootMargin: '0px',
 //     threshold: 0.5
 // };
 
-// const targetSection = document.getElementById('about');
+// // Target the section you want to observe
+// var targetSection = document.getElementById('about');
 
+// // Function to handle the intersection changes
 // function handleIntersection(entries, observer) {
 //     entries.forEach(function(entry) {
 //         if (entry.isIntersecting) {
-//             animation.play();
+//             // Start the Lottie animation when the section is in view
+//             animation_desktop.play();
+//             animation_mobile.play();
+//             animation_slide.play();
 //             observer.unobserve(entry.target);
 //         }
 //     });
 // }
 
-// const observer = new IntersectionObserver(handleIntersection, options);
+// // Create an Intersection Observer instance
+// var observer = new IntersectionObserver(handleIntersection, options);
+
+// // Observe the target section
 // observer.observe(targetSection);
 
+// // load animation mobile
 // const animation_mobile = bodymovin.loadAnimation({
 //     container: document.getElementById('bm'),
 //     renderer: 'svg',
 //     loop: false,
 //     autoplay: false,
-//     path: 'data/json/whiteribbon.json'
+//     path: '../data/json/whiteribbon.json'
 // });
 
-// const animation_desktop = bodymovin.loadAnimation({
+// // Load animation desktop
+// var animation_desktop = bodymovin.loadAnimation({
 //     container: document.getElementById('ribbon'),
 //     renderer: 'svg',
 //     loop: false,
-//     autoplay: false,
-//     path: 'data/json/whiteribbon.json'
+//     autoplay: false, // Set autoplay to false initially
+//     path: '../data/json/whiteribbon-desktop.json'
 // });
 
-// // Mobile Menu
-// document.addEventListener("DOMContentLoaded", function() {
-//     const links = document.getElementsByClassName("nav-item");
-//     const menu = document.getElementById("menu-nav");
+// // Load animation hero (slide down)
+// var animation_slide = bodymovin.loadAnimation({
+//     container: document.getElementById('slide'),
+//     renderer: 'svg',
+//     loop: true,
+//     autoplay: true, // Set autoplay to false initially
+//     path: '../data/json/sliding-down.json'
+// });
+
+
+// Mobile Menu
+document.addEventListener("DOMContentLoaded", function() {
+    const links = document.getElementsByClassName("nav-item");
+    const menu = document.getElementById("menu-nav");
     
-//     for (let i = 0; i < links.length; i++) {
-//         links[i].addEventListener("click", function(event) {
-//             console.log("Nav link clicked");
-//             menu.classList.remove("show");
-//         });
-//     }
-// });
+    for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function(event) {
+            console.log("Nav link clicked");
+            menu.classList.remove("show");
+        });
+    }
+});
 
-// // Audio
-// function toggleAudio() {
-//     const audio = document.getElementById("audioPlayer");
-//     const playButton = document.getElementById("playButton");
+// Audio
+function toggleAudio() {
+    const audio = document.getElementById("audioPlayer");
+    const playButton = document.getElementById("playButton");
 
-//     if (audio.paused) {
-//         audio.play();
-//         playButton.src = "./dist/img/icons/sound-on.png";
-//     } else {
-//         audio.pause();
-//         audio.currentTime = 0;
-//         playButton.src = "./dist/img/icons/sound-off.png";
-//     }
+    if (audio.paused) {
+        audio.play();
+        playButton.src = "./dist/img/icons/sound-on.png";
+    } else {
+        audio.pause();
+        audio.currentTime = 0;
+        playButton.src = "./dist/img/icons/sound-off.png";
+    }
 
-//     audio.addEventListener('ended', function() {
-//         audio.play();
-//         playButton.src = "./dist/img/icons/sound-on.png";
-//     });
-// }
-
-// let  frente  =  document.getElementById("frente")
-
-// document.addEventListener('mousemove', (event) =>{
-//     let  x  =  event.pageX  +  "px";
-//     let  y  =  event.pageY  +  "px";
-//     // frente.style.webkitMaskImage  =  radial-gradient(circle at ${x}  ${y}, transparent 55px, black 0%);
-//     frente.style.maskImage = `radial-gradient(circle at ${x} ${y}, rgba(255, 255, 255, 0.7) 1px, white 10%)`;
-// })
+    audio.addEventListener('ended', function() {
+        audio.play();
+        playButton.src = "./dist/img/icons/sound-on.png";
+    });
+}

@@ -34,6 +34,20 @@
                     list-style: none;
                     cursor: pointer;
 
+                    .logo {
+                        background-image: url('../../dist/img/header/logo.png');
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        width: calc(18px * 13);
+                        // width: 40px;
+                        height: 18px;
+                        opacity: .8;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+                    }
+
                     a {
                         text-decoration: none;
                         color: #d6d5d1;

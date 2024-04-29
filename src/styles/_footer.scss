@@ -150,6 +150,11 @@
                     font-weight: 700;
                     letter-spacing: -.02em;
                     margin-bottom: 2px;
+
+                    &:hover {
+                        color: #fbffcd;
+                        cursor: pointer;
+                    }
                 }
 
                 .city {

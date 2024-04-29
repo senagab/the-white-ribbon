@@ -15,6 +15,7 @@
 
 @mixin title($fontsize: 42px) {
     @include text($fontsize);
+    font-family: 'Tiempos Semibold', serif;
 }
 
 * {
@@ -31,6 +32,11 @@ body {
     @include text(24px);
 }
 
+.text--biggest {
+    @include text(36px);
+    font-family: 'Inter Bold', sans-serif;
+}
+
 .text {
     @include text;
 }
@@ -41,6 +47,10 @@ body {
 
 .title--big {
     @include title(100px);
+}
+
+.title--medium {
+    @include title(72px);
 }
 
 .title {
