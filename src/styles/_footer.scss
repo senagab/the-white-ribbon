@@ -17,6 +17,24 @@
             &__left {
                 display: flex;
                 flex-direction: column;
+                position: relative;
+                // overflow: hidden;
+
+                .slideup {
+                    position: absolute;
+                    bottom: -50px; /* Should be equal to container height */
+                    height: 50px;
+                    animation: slideUp 1s forwards;
+                }
+
+                @keyframes slideUp {
+                    from {
+                        bottom: -50px;
+                    }
+                    to {
+                        bottom: 10px;
+                    }
+                }
                 
                 .socials {
                     display: flex;

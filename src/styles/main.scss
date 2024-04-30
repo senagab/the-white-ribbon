@@ -26,6 +26,7 @@
 
 body {
     background-color: variaveis.$bgcolor;
+    position: relative;
 }
 
 .text--big {
@@ -75,4 +76,25 @@ body {
 
 .invisible {
     display: none;
+}
+
+.roll {
+    width: 140px;
+    height: 140px;
+    // background-color: red;
+    position: fixed;
+    margin: 100px;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    // display: none;
+
+    &__icon {
+        background-image: url(../../dist/img/main/roll-up.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 140px;
+        height: 140px;
+    }
 }
