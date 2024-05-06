@@ -133,9 +133,15 @@
 
             
             &__container {
-                display: block;
-    
+                display: block;    
                 
+                #concept-text {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    text-align: center;
+                }
+
                 &__text {
                     // display: flex;
                     // justify-content: space-between;
