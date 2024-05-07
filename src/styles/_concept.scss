@@ -100,6 +100,10 @@
             &__container {
 
                 &__text {
+
+                    .text--small {
+                        flex-basis: 50%;
+                    }
                 }
             }
         }
