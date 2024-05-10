@@ -68,7 +68,7 @@
                 .text--small {
                     letter-spacing: 3px;
                     text-wrap: wrap;
-                    // margin: 0 35px;
+                    max-width: 300px;
                 }
             }
             
@@ -112,6 +112,14 @@
 
                     .text--small {
                         flex-basis: 50%;
+
+                        &:nth-child(1) {
+                            text-align: left;
+                        }
+        
+                        &:nth-child(2) {
+                            text-align: right;
+                        }
                     }
                 }
             }
