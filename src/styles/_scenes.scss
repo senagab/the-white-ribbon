@@ -149,13 +149,12 @@
                     &__item {
                         .thumbnail {
                             h3.title {
-                                font-size: 10px !important;
-                                color: red !important;
+                                display: none;
                             }
                         }
 
                         .scene-description {
-                            font-size: 40px;
+                            font-size: 18px;
                         }
 
                         // &:nth-child(3) {

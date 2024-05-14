@@ -6,6 +6,7 @@
     background-color:variaveis.$transparent;
     transition: background-color 0.3s ease;
     z-index: 999 !important;
+    min-width: 1024px;
 
     &__nav {
         padding: 5px 70px 5px;
