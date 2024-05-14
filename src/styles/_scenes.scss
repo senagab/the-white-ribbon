@@ -197,6 +197,7 @@
                 .title {
                     font-size: 4em !important;
                     color: #fff;
+                    text-align: center;
                     line-height: 2em;
                     width: 8em;
                 }
@@ -205,10 +206,11 @@
             &__list {    
 
                 .title {
-                    font-size: 65px;
-                    line-height: 7rem;
-                    text-align: center;
-                    display: block;
+                    // font-size: 65px;
+                    // line-height: 7rem;
+                    // text-align: center;
+                    // display: block;
+                    display: none;
                 }
 
                 display: grid;
