@@ -383,7 +383,7 @@
             const screenWidth = window.innerWidth;
             const textContainer = document.getElementById('concept-text');
 
-            if (screenWidth > 320 && screenWidth <= 768) { // Smartphone/iPhone
+            if (screenWidth > 320 && screenWidth < 769) { // Smartphone/iPhone
                 textContainer.innerHTML = `
                     <h3>more things</h3>  
                     <div class="text--small">

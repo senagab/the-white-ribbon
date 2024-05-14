@@ -128,11 +128,11 @@
                         flex-basis: 50%;
 
                         &:nth-child(1) {
-                            text-align: left;
+                            text-align: right;
                         }
         
                         &:nth-child(2) {
-                            text-align: right;
+                            text-align: left;
                         }
                     }
                 }
@@ -180,6 +180,10 @@
                         flex-basis: 100%;
 
                         &:nth-child(1) {
+                            text-align: right;
+                        }
+
+                        &:nth-child(2) {
                             text-align: left;
                         }
                     }
