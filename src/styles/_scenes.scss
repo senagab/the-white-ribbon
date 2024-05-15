@@ -195,7 +195,7 @@
                 display: block;
 
                 .title {
-                    font-size: 4em !important;
+                    font-size: 3em;
                     color: #fff;
                     text-align: center;
                     line-height: 2em;
@@ -219,6 +219,12 @@
                 column-gap: 0;
 
                 &__item {
+
+                    .thumbnail {
+                        .scene-description {
+                            font-size: 2em;
+                        }
+                    }
                     .scene-item {
                         height: 20em;
                         width: 100%;
