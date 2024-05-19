@@ -44,7 +44,7 @@
             }
 
             
-            &__text {
+            &__text--lg {
                 // display: grid;
                 // grid-template-columns: 1fr 1fr 1fr;
                 // column-gap: 105px;
@@ -73,6 +73,14 @@
                     text-wrap: wrap;
                     max-width: 300px;
                 }
+            }
+
+            &__text--md {
+                display: none;
+            }
+
+            &__text--sm {
+                display: none;
             }
             
             .text--biggest {
