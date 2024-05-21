@@ -36,7 +36,7 @@
             justify-content: center;
             margin: 0 auto;
                 
-            #concept-text {
+            #concept-text--lg {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
@@ -50,6 +50,12 @@
                 // column-gap: 105px;
                 // max-width: 900px;
                 // margin-top: 30px;
+                
+                .text--small {
+                    letter-spacing: 3px;
+                    text-wrap: wrap;
+                    max-width: 300px;
+                }
 
                 .text--small {
                     flex: 1;
@@ -66,12 +72,6 @@
                     &:nth-child(3) {
                         text-align: right;
                     }
-                }
-                
-                .text--small {
-                    letter-spacing: 3px;
-                    text-wrap: wrap;
-                    max-width: 300px;
                 }
             }
 
@@ -129,8 +129,20 @@
             background-image: none;
 
             &__container {
+                
+                #concept-text--lg {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    text-align: center;
+                }
 
-                &__text {
+                &__text--lg {
+                    display: none;
+                }
+
+                &__text--md {
+                    display: block;
 
                     .text--small {
                         flex-basis: 50%;
