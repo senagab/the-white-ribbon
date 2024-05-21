@@ -193,8 +193,16 @@
             &__container {
                 display: block;
 
-                .concept-text {
-                    margin-top: 30px;
+                &__text--lg {
+                    display: none;
+                }
+
+                &__text--md {
+                    display: none;
+                }
+                
+                &__text--sm {
+                    display: block;
 
                     .text--small {
                         flex-basis: 100%;
@@ -207,6 +215,10 @@
                             text-align: left;
                         }
                     }
+                }
+
+                .concept-text {
+                    margin-top: 30px;
                 }
             }
         }
