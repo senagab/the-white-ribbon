@@ -131,31 +131,42 @@
             &__container {
                 
                 #concept-text--lg {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    text-align: center;
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // justify-content: center;
+                    // text-align: center;
+                    display: none;
                 }
 
                 &__text--lg {
                     display: none;
                 }
 
-                &__text--md {
-                    display: block;
+                #concept-text--md {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-evenly;
 
                     .text--small {
                         flex-basis: 50%;
 
                         &:nth-child(1) {
                             text-align: right;
+                            width: 30em;
+                            padding: 1em;
                         }
         
                         &:nth-child(2) {
                             text-align: left;
+                            width: 30em;
+                            padding: 1em;
                         }
                     }
                 }
+
+                // &__text--md {
+                //     display: block;
+                // }
             }
         }
     }
