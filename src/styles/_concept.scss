@@ -60,6 +60,8 @@
                 .text--small {
                     flex: 1;
                     flex-basis: 33.33%;
+                    font-family: 'Tiempos', serif;
+                    letter-spacing: 2px;
 
                     &:nth-child(1) {
                         text-align: left;
