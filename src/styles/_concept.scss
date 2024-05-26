@@ -133,14 +133,6 @@
             &__container {
                 
                 #concept-text--lg {
-                    // display: flex;
-                    // flex-wrap: wrap;
-                    // justify-content: center;
-                    // text-align: center;
-                    display: none;
-                }
-
-                &__text--lg {
                     display: none;
                 }
 
@@ -199,18 +191,23 @@
             justify-content: center;
             align-items: center;
 
-            .text--biggest, .title--medium {
+            .text--biggest {
+                text-align: center;
+            }
+
+            .title--medium {
                 text-align: center;
             }
 
             &__container {
-                display: block;
-
-                &__text--lg {
+                display: flex;
+                justify-content: center;
+                
+                #concept-text--lg {
                     display: none;
                 }
 
-                &__text--md {
+                #concept-text--md {
                     display: none;
                 }
                 
@@ -219,14 +216,9 @@
 
                     .text--small {
                         flex-basis: 100%;
-
-                        &:nth-child(1) {
-                            text-align: right;
-                        }
-
-                        &:nth-child(2) {
-                            text-align: left;
-                        }
+                        text-align: center;
+                        padding: 0 10em;
+                        font-size: 18px;
                     }
                 }
 
