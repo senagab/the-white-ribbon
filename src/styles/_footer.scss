@@ -262,6 +262,7 @@
                         &-item {
                             width: 32px;
                             height: 32px;
+                            margin-bottom: 20px;
                         }
                     }
 
@@ -270,8 +271,30 @@
                     }
 
                     .dev {
-                        font-size: 30px;
+                        font-size: 25px;
                     }
+                }
+            }
+
+            .award-container {
+
+                .award {
+                    width: 200px;
+                    height: 60px;
+                }
+            }
+
+            &__bottom {
+                h4 {
+                    font-size: 36px;
+                }
+
+                .city {
+                    font-size: 18px;
+                }
+
+                .email, .copy {
+                    font-size: 20px;
                 }
             }
         }
