@@ -257,10 +257,20 @@
             &__top {
 
                 &__left {
+
                     .socials {
-                        span.slogan {
-                            font-size: 35px !important;
+                        &-item {
+                            width: 32px;
+                            height: 32px;
                         }
+                    }
+
+                    .slogan {
+                        font-size: 35px !important;
+                    }
+
+                    .dev {
+                        font-size: 30px;
                     }
                 }
             }
