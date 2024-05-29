@@ -274,6 +274,19 @@
                         font-size: 25px;
                     }
                 }
+                
+
+                &__right {
+                    .footer-links {
+
+                        .lista-links {
+                            
+                            a {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
             }
 
             .award-container {
