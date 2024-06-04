@@ -45,23 +45,14 @@
 
             
             &__text--lg {
-                // display: grid;
-                // grid-template-columns: 1fr 1fr 1fr;
-                // column-gap: 105px;
-                // max-width: 900px;
-                // margin-top: 30px;
-                
-                .text--small {
-                    letter-spacing: 3px;
-                    text-wrap: wrap;
-                    max-width: 300px;
-                }
 
                 .text--small {
                     flex: 1;
                     flex-basis: 33.33%;
                     font-family: 'Tiempos', serif;
                     letter-spacing: 2px;
+                    text-wrap: wrap;
+                    max-width: 300px;
 
                     &:nth-child(1) {
                         text-align: left;
@@ -143,6 +134,8 @@
                     justify-content: space-evenly;
 
                     .text--small {
+                        font-family: 'Tiempos', serif;
+                        letter-spacing: 2px;
                         flex-basis: 50%;
 
                         &:nth-child(1) {
@@ -198,6 +191,12 @@
 
             .title--medium {
                 text-align: center;
+            }
+
+            .text--small {
+                font-family: 'Tiempos', serif;
+                letter-spacing: 2px;
+                font-size: 20px !important;
             }
 
             &__container {
