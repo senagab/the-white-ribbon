@@ -1,5 +1,5 @@
 .footer {
-    height: 85vh;
+    height: 95vh;
     background-color: #000;
     width: 100%;
     min-width: 1024px;
@@ -212,7 +212,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
-        height: 70vh;
+        height: 95vh !important;
         width: 100%;
         min-width: 1024px;
 
@@ -247,7 +247,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
-        height: 160vh;
+        height: 160vh !important;
         width: 100%;
         min-width: 1024px;
         font-size: 2em;
