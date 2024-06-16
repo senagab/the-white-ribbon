@@ -21,8 +21,15 @@ function images(){
         .pipe(gulp.dest('./dist/img'));
 }
 
+function watch() {
+    gulp.watch('./src/styles/*.scss', styles);
+    gulp.watch('./src/scripts/*.js', scripts);
+    gulp.watch('./src/img/**/*', images);
+}
+
 exports.default = gulp.parallel(styles, images, scripts);
 
-exports.watch = function() {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
-}
+exports.watch = watch;
+// exports.watch = function() {
+//     gulp.watch('./src/styles/*.scss', gulp.parallel(styles, images, scripts))
+// }
