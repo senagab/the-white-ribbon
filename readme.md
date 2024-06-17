@@ -31,7 +31,7 @@ This site is being developed using the following technologies:
 
 2. Install dependencies:
     ```bash
-    npm install --save-dev gulp sass gulp-sass gulp-imagemin@7.1.0
+    npm install --save-dev gulp sass gulp-sass gulp-imagemin@7.1.0 uglify 
     ```
 
 3. Build the project using Gulp:
