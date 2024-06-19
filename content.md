@@ -1,0 +1,2 @@
+# Content of the page
+> as i reach the final steps towards concluding this portfolio exercise, this is going to become an organization area for conceptualizing the content of the website. I will be using this as a space to craft the content that will go into **the white ribbon**. Please feel free to suggest any improvements you'd like to see on our website.
