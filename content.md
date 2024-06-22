@@ -16,3 +16,5 @@ _As we continue to delve into this golden age of elevated horror, the fingerprin
 ## Director
 
 _Most people don’t know that before becoming a filmmaker, Haneke studied psychology, philosophy, and drama in college, which totally shows in the psychological depth of his films. He also worked in theater and TV for years before making his first feature film at nearly 47. This late start in film probably gave him a lot of life experience and a unique perspective that’s evident in his work._
+
+## Scenes
