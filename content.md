@@ -1,7 +1,7 @@
 # Content of the page
 > As we reach the final steps of this portfolio exercise, this area will become a space for conceptualizing the website's content. I will use this space to craft the content for The White Ribbon. Please feel free to suggest any improvements you'd like to see on our website.
 
-## hero
+## Hero
 
 _Through younger generations, we are given the opportunity to feel young again. So completely free. It makes the idea of innate evil and horror seem out worldly. What does it take to challenge the belief that even children can be rotten from the core, with envy and hatred spilling out of their guts?_
 
