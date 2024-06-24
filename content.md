@@ -1,6 +1,10 @@
 # Content of the page
 > As we reach the final steps of this portfolio exercise, this area will become a space for conceptualizing the website's content. I will use this space to craft the content for The White Ribbon. Please feel free to suggest any improvements you'd like to see on our website.
 
+## hero
+
+_Through younger generations, we are given the opportunity to feel young again. So completely free. It makes the idea of innate evil and horror seem out worldly. What does it take to challenge the belief that even children can be rotten from the core, with envy and hatred spilling out of their guts?_
+
 ## Concept
 
 _Tapping into the primal fears and existential dread that lurk within the human psyche is what the epitome of psychological horror can be defined as. It thrives on the subtle, the unseen, and the uncanny, transforming ordinary situations into profound explorations of human nature and the darkness that resides within us all. Films like "Hereditary," "The Babadook," and "It Follows" encapsulate this essence, where the horror is not just external but deeply internal, drawing from the characters' psychological landscapes and, in turn, our own._
@@ -16,5 +20,3 @@ _As we continue to delve into this golden age of elevated horror, the fingerprin
 ## Director
 
 _Most people don’t know that before becoming a filmmaker, Haneke studied psychology, philosophy, and drama in college, which totally shows in the psychological depth of his films. He also worked in theater and TV for years before making his first feature film at nearly 47. This late start in film probably gave him a lot of life experience and a unique perspective that’s evident in his work._
-
-## Scenes
