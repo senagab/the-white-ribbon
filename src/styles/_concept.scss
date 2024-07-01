@@ -88,6 +88,10 @@
                 text-transform: uppercase;
                 line-height: 28px;
             }
+
+            &__read-more {
+                display: none;
+            }
         }
 
     }
@@ -152,6 +156,10 @@
                     }
                 }
 
+                &__read-more {
+                    display: none;
+                }
+
                 // &__text--md {
                 //     display: block;
                 // }
@@ -187,16 +195,18 @@
 
             .text--biggest {
                 text-align: center;
+                font-size: 45px;
             }
 
             .title--medium {
                 text-align: center;
+                font-size: 82px;
             }
 
             .text--small {
                 font-family: 'Tiempos', serif;
                 letter-spacing: 2px;
-                font-size: 20px !important;
+                font-size: 25px !important;
             }
 
             &__container {
@@ -215,10 +225,24 @@
                     display: block;
 
                     .text--small {
+                        margin-top: 15px;
                         flex-basis: 100%;
                         text-align: center;
-                        padding: 0 10em;
+                        padding: 0 4em;
                         font-size: 18px;
+                    }
+                }
+
+                &__read-more {
+                    margin-top: 20px;
+                    display: block;
+                    color: rgb(220, 220, 220);
+                    font-size: 30px;
+                    text-decoration: underline;
+                    font-family: 'tiempos', serif;
+
+                    &:hover {
+                        color: white;
                     }
                 }
 
