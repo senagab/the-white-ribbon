@@ -89,7 +89,7 @@ $textBgColor: #F1ECE9;
             }
 
             &__text {
-                height: 100vh;
+                height: 130vh;
                 justify-content: space-evenly;
                 flex-direction: column;
                 align-items: center;
@@ -100,11 +100,11 @@ $textBgColor: #F1ECE9;
                     padding-top: 20px;
 
                     .title-small {
-                        font-size: 3em;
+                        font-size: 4em;
                     }
 
                     .text-small {
-                        font-size: 18px;
+                        font-size: 2em;
                     }
                 }
 
