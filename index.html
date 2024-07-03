@@ -144,6 +144,9 @@
                 <div class="about__container__ribbons">
                     <div id="ribbon"></div>
                 </div>
+                <div class="about__container__ribbons">
+                    <div id="tablet"></div>
+                </div>
                 <div class="about__container__ribbons-small">
                     <div class="about__container__ribbons-small__item">
                         
@@ -439,6 +442,7 @@
                     // Start the Lottie animation when the section is in view
                     animation_desktop.play();
                     animation_mobile.play();
+                    animation_tablet.play();
                     animation_slide.play();
                     observer.unobserve(entry.target);
                 }
@@ -467,6 +471,15 @@
             loop: false,
             autoplay: false, // Set autoplay to false initially
             path: '../data/json/whiteribbon-desktop.json'
+        });
+
+        // Load animation desktop
+        var animation_tablet = bodymovin.loadAnimation({
+            container: document.getElementById('tablet'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false, // Set autoplay to false initially
+            path: '../data/json/whiteribbon-tablet.json'
         });
 
         // Load animation hero (slide down)
