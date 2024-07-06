@@ -220,7 +220,7 @@
 
                 display: grid;
                 grid-template-columns: 1fr;
-                row-gap: 30px;
+                row-gap: 30px !important;
                 column-gap: 0;
 
                 &__item {
