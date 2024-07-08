@@ -124,3 +124,24 @@ $textBgColor: #F1ECE9;
 
     }
 }
+
+@media (min-aspect-ratio: 2/1) {
+    .director {
+
+        &__container {
+
+            &__text {
+
+            }
+
+            &__image {
+
+                .director-photo {
+
+                    height: 650px;
+
+                }
+            }
+        }
+    }
+}
