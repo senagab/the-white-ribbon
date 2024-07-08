@@ -264,3 +264,41 @@
         }
     }
 }
+
+@media (min-aspect-ratio: 2/1) {
+    .hero {
+
+        &__container {
+
+            &__side {
+                position: absolute;
+                top: 45%;
+                left: 10vh;
+                z-index: 5;
+
+                .separator {
+                    width: 10px;
+                }
+
+                .socials {
+                }
+            }
+
+            &__title {
+                padding: 10% 60px 0;
+
+                &__top {
+
+                }
+
+                &__mid {
+
+                }
+
+                &__bottom {
+
+                }
+            }
+        }
+    }
+}
