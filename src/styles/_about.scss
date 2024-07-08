@@ -39,6 +39,10 @@
                 display: none;
             }
 
+            #ultra-wide {
+                display: none;
+            }
+
             &__item {
                 position: relative;
             }
@@ -70,6 +74,10 @@
                     width: 100%;
                     height: 130vh;
                     z-index: 1;
+                }
+
+                #ultra-wide {
+                    display: none;
                 }
 
                 &__ribbons-small {
@@ -109,5 +117,27 @@
 }
 
 @media (min-aspect-ratio: 2/1) {
-    
+    .about {
+
+        &__container {
+
+            &__ribbons {
+
+                #ribbon {
+                    display: none;
+                }
+
+                #tablet {
+                    display: none;
+                }
+
+                #ultra-wide {
+                    display: block;
+                    position: absolute;
+                    top: -100px;
+                    z-index: 999;
+                }
+            }
+        }
+    }
 }
