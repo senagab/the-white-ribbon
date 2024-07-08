@@ -147,6 +147,9 @@
                 <div class="about__container__ribbons">
                     <div id="tablet"></div>
                 </div>
+                <div class="about__container__ribbons">
+                    <div id="ultra-wide"></div>
+                </div>
                 <div class="about__container__ribbons-small">
                     <div class="about__container__ribbons-small__item">
                         
@@ -443,6 +446,7 @@
                     animation_desktop.play();
                     animation_mobile.play();
                     animation_tablet.play();
+                    animation_ultrawide.play();
                     animation_slide.play();
                     observer.unobserve(entry.target);
                 }
@@ -480,6 +484,15 @@
             loop: false,
             autoplay: false, // Set autoplay to false initially
             path: '../data/json/whiteribbon-tablet.json'
+        });
+
+        // Load animation hero (slide down)
+        var animation_ultrawide = bodymovin.loadAnimation({
+            container: document.getElementById('ultra-wide'),
+            renderer: 'svg',
+            loop: false,
+            autoplay: false, // Set autoplay to false initially
+            path: '../data/json/whiteribbon-ultra-wide.json'
         });
 
         // Load animation hero (slide down)
