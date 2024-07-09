@@ -334,3 +334,9 @@
         }
     }
 }
+
+@media (min-aspect-ratio: 2/1) {
+    .footer {
+        height: 65vh;
+    }
+}
