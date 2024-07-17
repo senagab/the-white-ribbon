@@ -22,8 +22,8 @@ const thumbnailElements = document.querySelectorAll('.thumbnail');
 const videoModal = document.getElementById('videoModal');
 const modalVideo = document.getElementById('modalVideo');
 const modalTitle = document.getElementById('videoModalLabel');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+// const prevBtn = document.getElementById('prevBtn');
+// const nextBtn = document.getElementById('nextBtn');
 
 let currentVideoIndex = 0;
 let videos = [];
