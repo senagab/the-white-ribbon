@@ -116,28 +116,28 @@
     }
 }
 
-// @media (min-aspect-ratio: 2/1) {
-//     .about {
+@media only screen and (min-width: 2160px) and (max-width: 3840px) {
+    .about {
 
-//         &__container {
+        &__container {
 
-//             &__ribbons {
+            &__ribbons {
 
-//                 #ribbon {
-//                     display: none;
-//                 }
+                #ribbon {
+                    display: none;
+                }
 
-//                 #tablet {
-//                     display: none;
-//                 }
+                #tablet {
+                    display: none;
+                }
 
-//                 #ultra-wide {
-//                     display: block;
-//                     position: absolute;
-//                     top: -250px;
-//                     z-index: 99;
-//                 }
-//             }
-//         }
-//     }
-// }
+                #ultra-wide {
+                    display: block;
+                    position: absolute;
+                    top: -250px;
+                    z-index: 99;
+                }
+            }
+        }
+    }
+}
