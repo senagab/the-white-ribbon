@@ -45,7 +45,10 @@ thumbnailElements.forEach(function (thumbnail, index) {
 });
 
 function updateModalContent() {
-    modalVideo.src = videos[currentVideoIndex].src;
+    console.log(`Loading video: ${videos[currentVideoIndex].src}`);
+    modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src}" type="video/mp4">`;
+    modalVideo.load(); // Ensure the video is loaded
+    modalVideo.play(); // Play the video
     modalTitle.innerText = videos[currentVideoIndex].title;
 }
 
