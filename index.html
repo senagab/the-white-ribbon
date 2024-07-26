@@ -270,7 +270,7 @@
                         </div>
                     </div>
                     <div class="scenes__container__list__item item_3">
-                        <div class="thumbnail" data-video-src="https://www.youtube.com/watch?v=b1wiu2wx6Tg&pp=ygUhdGhlIHdoaXRlIHJpYmJvbiBob3JlciBmYWxsIHNjZW5l" data-toggle="modal" data-target="#videoModal">
+                        <div class="thumbnail" data-video-src="https://www.youtube.com/watch?v=b1wiu2wx6Tg&pp=ygUhdGhlIHdoaXRlIHJpYmJvbiBob3JlciBmYWxsIHNjZW5l" type="video/mp4" data-toggle="modal" data-target="#videoModal">
                             <img src="./dist/img/scenes/beginning.png" class="scene-item"></img>
                             <img class="play" src="./dist/img/scenes/play.png" alt="">
                             <span class="scene-description">
@@ -442,7 +442,7 @@
 
         function updateModalContent() {
             console.log(`Loading video: ${videos[currentVideoIndex].src}`);
-            modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src}" type="video/mp4">`;
+            modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src}">`;
             modalVideo.load(); // Ensure the video is loaded
             modalVideo.play(); // Play the video
             modalTitle.innerText = videos[currentVideoIndex].title;
