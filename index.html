@@ -270,7 +270,7 @@
                         </div>
                     </div>
                     <div class="scenes__container__list__item item_3">
-                        <div class="thumbnail" data-video-src="https://www.youtube.com/watch?v=b1wiu2wx6Tg&pp=ygUhdGhlIHdoaXRlIHJpYmJvbiBob3JlciBmYWxsIHNjZW5l" data-toggle="modal" data-target="#videoModal">
+                        <div class="thumbnail" data-video-src="https://raw.githubusercontent.com/senagab/servidores-estaticos/main/beginning2.mp4" data-toggle="modal" data-target="#videoModal">
                             <img src="./dist/img/scenes/beginning.png" class="scene-item"></img>
                             <img class="play" src="./dist/img/scenes/play.png" alt="">
                             <span class="scene-description">
@@ -424,7 +424,8 @@
 
         thumbnailElements.forEach(function (thumbnail, index) {
             const videoSrc = thumbnail.dataset.videoSrc;
-            const videoTitle = thumbnail.querySelector('.scene-description').innerText = amount;
+            const videoTitleElement = thumbnail.querySelector('.scene-description');
+            const videoTitle = videoTitleElement ? videoTitleElement.innerText : 'Video Title';
 
             videos.push({
                 src: videoSrc,
@@ -435,12 +436,12 @@
                 currentVideoIndex = index;
                 updateModalContent();
                 $('#videoModal').modal('show');
-                console.log(videoTitle);
             });
         });
 
         function updateModalContent() {
-            modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src} type="video/mp4"">`;
+            console.log(`Loading video: ${videos[currentVideoIndex].src}`);
+            modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src}" type="video/mp4">`;
             modalVideo.load(); // Ensure the video is loaded
             modalVideo.play(); // Play the video
             modalTitle.innerText = videos[currentVideoIndex].title;
@@ -449,6 +450,7 @@
         $('#videoModal').on('hide.bs.modal', function () {
             modalVideo.pause();
         });
+
 
 
         // // comportamento botão roll up         
