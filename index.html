@@ -418,15 +418,13 @@
         const videoModal = document.getElementById('videoModal');
         const modalVideo = document.getElementById('modalVideo');
         const modalTitle = document.getElementById('videoModalLabel');
-        // const prevBtn = document.getElementById('prevBtn');
-        // const nextBtn = document.getElementById('nextBtn');
 
         let currentVideoIndex = 0;
         let videos = [];
 
         thumbnailElements.forEach(function (thumbnail, index) {
             const videoSrc = thumbnail.dataset.videoSrc;
-            const videoTitle = thumbnail.querySelector('.scene-description').innerText;
+            const videoTitle = thumbnail.querySelector('.scene-description').innerText = amount;
 
             videos.push({
                 src: videoSrc,
@@ -437,11 +435,11 @@
                 currentVideoIndex = index;
                 updateModalContent();
                 $('#videoModal').modal('show');
+                console.log(videoTitle);
             });
         });
 
         function updateModalContent() {
-            console.log(`Loading video: ${videos[currentVideoIndex].src}`);
             modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src} type="video/mp4"">`;
             modalVideo.load(); // Ensure the video is loaded
             modalVideo.play(); // Play the video
