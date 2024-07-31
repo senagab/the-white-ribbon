@@ -20,6 +20,8 @@
   },
   "dependencies": {
     "build": "^0.1.4",
+    "fluent-ffmpeg": "^2.1.3",
+    "gulp-fluent-ffmpeg": "^2.0.0",
     "npm": "^10.4.0",
     "run": "^1.5.0"
   }
