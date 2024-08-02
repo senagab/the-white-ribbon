@@ -23,7 +23,7 @@ function images(){
 }
 
 function videos() {
-    return gulp.src('./src/videos/**/*.{mp4,avi,mkv}')
+    return gulp.src('./src/videos/**/*.{mp4}')
         .pipe(ffmpeg('output.mp4', function (cmd) {
             return cmd
                 .videoCodec('libx264')
