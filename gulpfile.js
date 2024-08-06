@@ -23,7 +23,7 @@ function images(){
 }
 
 function videos() {
-    return gulp.src('./src/videos/**/*.{mp4}')
+    return gulp.src('./src/videos/*.{mp4}')
         .pipe(ffmpeg('output.mp4', function (cmd) {
             return cmd
                 .videoCodec('libx264')
@@ -45,6 +45,3 @@ function watch() {
 exports.default = gulp.parallel(styles, images, scripts, videos);
 
 exports.watch = watch;
-// exports.watch = function() {
-//     gulp.watch('./src/styles/*.scss', gulp.parallel(styles, images, scripts))
-// }
