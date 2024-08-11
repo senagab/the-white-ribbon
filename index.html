@@ -267,7 +267,7 @@
                         </div>
                     </div>
                     <div class="scenes__container__list__item item_3">
-                        <div class="thumbnail" data-video-src="https://www.youtube.com/watch?v=Am3NyxSgQEg" data-toggle="modal" data-target="#videoModal">
+                        <div class="thumbnail" data-video-src="./beginning.mp4" data-toggle="modal" data-target="#videoModal">
                             <img src="./dist/img/scenes/beginning.png" class="scene-item"></img>
                             <img class="play" src="./dist/img/scenes/play.png" alt="">
                             <span class="scene-description">
@@ -350,6 +350,25 @@
                 </div>
             </div>
         </div>
+        <!-- video section -->
+        <section class="video-section">
+            <h2>Our Featured Video</h2>
+            <div class="video-container">
+                <video id="videoPlayer" width="640" height="360" controls>
+                    <source src="beginning.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="controls">
+                    <button id="playPause">Play</button>
+                    <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+                    <button id="fullScreen">Fullscreen</button>
+                </div>
+            </div>
+        </section>
+
+        <style>
+        </style>
+
     </section>
     
     <footer class="footer">
@@ -405,141 +424,177 @@
         </div>
     </footer>
 
-    <script src="./dist/js/main.js"></script>
+    <!-- <script src="./dist/js/main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
-        // Modals
-        const thumbnailElements = document.querySelectorAll('.thumbnail');
-        const videoModal = document.getElementById('videoModal');
-        const modalVideo = document.getElementById('modalVideo');
-        const modalTitle = document.getElementById('videoModalLabel');
+        document.addEventListener("DOMContentLoaded", function () {
+            // Seleciona todas as miniaturas que têm o atributo 'data-toggle' e 'data-target'
+            const thumbnails = document.querySelectorAll('.thumbnail[data-toggle="modal"]');
 
-        let currentVideoIndex = 0;
-        let videos = [];
-
-        thumbnailElements.forEach(function (thumbnail, index) {
-            const videoSrc = thumbnail.dataset.videoSrc;
-            const videoTitleElement = thumbnail.querySelector('.scene-description');
-            const videoTitle = videoTitleElement ? videoTitleElement.innerText : 'Video Title';
-
-            videos.push({
-                src: videoSrc,
-                title: videoTitle
+            thumbnails.forEach(function (thumbnail) {
+                thumbnail.addEventListener('click', function () {
+                    // Obtém o caminho do vídeo a partir do atributo 'data-video-src'
+                    const videoSrc = this.getAttribute('data-video-src');
+                    
+                    // Seleciona o elemento <video> na modal
+                    const modalVideo = document.getElementById('modalVideo');
+                    
+                    // Atualiza o atributo 'src' da tag <source> dentro do <video>
+                    modalVideo.querySelector('source').src = videoSrc;
+                    
+                    // Carrega o vídeo para que o navegador entenda que o src foi atualizado
+                    modalVideo.load();
+                    
+                    // Reproduz o vídeo automaticamente
+                    modalVideo.play();
+                });
             });
 
-            thumbnail.addEventListener('click', function () {
-                currentVideoIndex = index;
-                updateModalContent();
-                $('#videoModal').modal('show');
+            // Pausa o vídeo e reseta o tempo quando a modal é fechada
+            $('#videoModal').on('hidden.bs.modal', function () {
+                const modalVideo = document.getElementById('modalVideo');
+                
+                // Pausa o vídeo
+                modalVideo.pause();
+                
+                // Reseta o tempo do vídeo para o início
+                modalVideo.currentTime = 0;
             });
         });
 
-        function updateModalContent() {
-            console.log(`Loading video: ${videos[currentVideoIndex].src}`);
-            modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src}" type="video/mp4">`;
-            modalVideo.load(); // Ensure the video is loaded
-            modalVideo.play(); // Play the video
-            modalTitle.innerText = videos[currentVideoIndex].title;
-        }
 
-        $('#videoModal').on('hide.bs.modal', function () {
-            modalVideo.pause();
-        });
+        // // Modals
+        // const thumbnailElements = document.querySelectorAll('.thumbnail');
+        // const videoModal = document.getElementById('videoModal');
+        // const modalVideo = document.getElementById('modalVideo');
+        // const modalTitle = document.getElementById('videoModalLabel');
+
+        // let currentVideoIndex = 0;
+        // let videos = [];
+
+        // thumbnailElements.forEach(function (thumbnail, index) {
+        //     const videoSrc = thumbnail.dataset.videoSrc;
+        //     const videoTitleElement = thumbnail.querySelector('.scene-description');
+        //     const videoTitle = videoTitleElement ? videoTitleElement.innerText : 'Video Title';
+
+        //     videos.push({
+        //         src: videoSrc,
+        //         title: videoTitle
+        //     });
+
+        //     thumbnail.addEventListener('click', function () {
+        //         currentVideoIndex = index;
+        //         updateModalContent();
+        //         $('#videoModal').modal('show');
+        //     });
+        // });
+
+        // function updateModalContent() {
+        //     console.log(`Loading video: ${videos[currentVideoIndex].src}`);
+        //     modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src}" type="video/mp4">`;
+        //     modalVideo.load(); // Ensure the video is loaded
+        //     modalVideo.play(); // Play the video
+        //     modalTitle.innerText = videos[currentVideoIndex].title;
+        // }
+
+        // $('#videoModal').on('hide.bs.modal', function () {
+        //     modalVideo.pause();
+        // });
 
 
 
-        // comportamento botão roll up         
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                // check if the scroll position has passed the section with id "hero"
-                if ($(this).scrollTop() > $('#hero').offset().top + $('#hero').outerHeight()) {
-                    // show the roll div with slide up animation
-                    $('.roll').slideDown();
-                } else {
-                    // hide the roll div if not in the desired position
-                    $('.roll').slideUp();
-                }
-            });
-        });
+        // // comportamento botão roll up         
+        // $(document).ready(function() {
+        //     $(window).scroll(function() {
+        //         // check if the scroll position has passed the section with id "hero"
+        //         if ($(this).scrollTop() > $('#hero').offset().top + $('#hero').outerHeight()) {
+        //             // show the roll div with slide up animation
+        //             $('.roll').slideDown();
+        //         } else {
+        //             // hide the roll div if not in the desired position
+        //             $('.roll').slideUp();
+        //         }
+        //     });
+        // });
         
-        // lottie
-        // Set up the options for the Intersection Observer
-        var options = {
-            root: null,
-            rootMargin: '0px',
-            threshold: 0.5
-        };
+        // // lottie
+        // // Set up the options for the Intersection Observer
+        // var options = {
+        //     root: null,
+        //     rootMargin: '0px',
+        //     threshold: 0.5
+        // };
 
-        // Target the section you want to observe
-        var targetSection = document.getElementById('about');
+        // // Target the section you want to observe
+        // var targetSection = document.getElementById('about');
 
-        // Function to handle the intersection changes
-        function handleIntersection(entries, observer) {
-            entries.forEach(function(entry) {
-                if (entry.isIntersecting) {
-                    // Start the Lottie animation when the section is in view
-                    animation_desktop.play();
-                    animation_mobile.play();
-                    animation_tablet.play();
-                    animation_ultrawide.play();
-                    animation_slide.play();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }
+        // // Function to handle the intersection changes
+        // function handleIntersection(entries, observer) {
+        //     entries.forEach(function(entry) {
+        //         if (entry.isIntersecting) {
+        //             // Start the Lottie animation when the section is in view
+        //             animation_desktop.play();
+        //             animation_mobile.play();
+        //             animation_tablet.play();
+        //             animation_ultrawide.play();
+        //             animation_slide.play();
+        //             observer.unobserve(entry.target);
+        //         }
+        //     });
+        // }
 
-        // Create an Intersection Observer instance
-        var observer = new IntersectionObserver(handleIntersection, options);
+        // // Create an Intersection Observer instance
+        // var observer = new IntersectionObserver(handleIntersection, options);
 
-        // Observe the target section
-        observer.observe(targetSection);
+        // // Observe the target section
+        // observer.observe(targetSection);
 
-        // load animation mobile
-        const animation_mobile = bodymovin.loadAnimation({
-            container: document.getElementById('bm'),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false,
-            path: '../data/json/whiteribbon.json'
-        });
+        // // load animation mobile
+        // const animation_mobile = bodymovin.loadAnimation({
+        //     container: document.getElementById('bm'),
+        //     renderer: 'svg',
+        //     loop: false,
+        //     autoplay: false,
+        //     path: '../data/json/whiteribbon.json'
+        // });
 
-        // Load animation desktop
-        var animation_desktop = bodymovin.loadAnimation({
-            container: document.getElementById('ribbon'),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false, // Set autoplay to false initially
-            path: '../data/json/whiteribbon-desktop.json'
-        });
+        // // Load animation desktop
+        // var animation_desktop = bodymovin.loadAnimation({
+        //     container: document.getElementById('ribbon'),
+        //     renderer: 'svg',
+        //     loop: false,
+        //     autoplay: false, // Set autoplay to false initially
+        //     path: '../data/json/whiteribbon-desktop.json'
+        // });
 
-        // Load animation desktop
-        var animation_tablet = bodymovin.loadAnimation({
-            container: document.getElementById('tablet'),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false, // Set autoplay to false initially
-            path: '../data/json/whiteribbon-tablet.json'
-        });
+        // // Load animation desktop
+        // var animation_tablet = bodymovin.loadAnimation({
+        //     container: document.getElementById('tablet'),
+        //     renderer: 'svg',
+        //     loop: false,
+        //     autoplay: false, // Set autoplay to false initially
+        //     path: '../data/json/whiteribbon-tablet.json'
+        // });
 
-        // Load animation hero (slide down)
-        var animation_ultrawide = bodymovin.loadAnimation({
-            container: document.getElementById('ultra-wide'),
-            renderer: 'svg',
-            loop: false,
-            autoplay: false, // Set autoplay to false initially
-            path: '../data/json/whiteribbon-ultra-wide.json'
-        });
+        // // Load animation hero (slide down)
+        // var animation_ultrawide = bodymovin.loadAnimation({
+        //     container: document.getElementById('ultra-wide'),
+        //     renderer: 'svg',
+        //     loop: false,
+        //     autoplay: false, // Set autoplay to false initially
+        //     path: '../data/json/whiteribbon-ultra-wide.json'
+        // });
 
-        // Load animation hero (slide down)
-        var animation_slide = bodymovin.loadAnimation({
-            container: document.getElementById('slide'),
-            renderer: 'svg',
-            loop: true,
-            autoplay: true, // Set autoplay to false initially
-            path: '../data/json/sliding-down.json'
-        });
+        // // Load animation hero (slide down)
+        // var animation_slide = bodymovin.loadAnimation({
+        //     container: document.getElementById('slide'),
+        //     renderer: 'svg',
+        //     loop: true,
+        //     autoplay: true, // Set autoplay to false initially
+        //     path: '../data/json/sliding-down.json'
+        // });
 
     </script>
 </body>

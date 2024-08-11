@@ -270,17 +270,18 @@
     border: none;
 }
 
-.modal.fade .modal-body {
-    width: 100%; /* Ensure the body takes the full width */
-    padding: 0;
-}
+// .modal.fade .modal-body {
+//     width: 100%; /* Ensure the body takes the full width */
+//     padding: 0;
+// }
 
 .modal.fade .modal-video {
     width: 100%; /* Make the video fill the modal width */
 }
 
-.close {
+button.close {
     color: #ddd;
+    background-color: none !important;
     font-weight: 300;
     font-size: 32px;
 }
@@ -295,10 +296,24 @@
     color: white;
 }
 
-.modal-video {
-    width: 100%;
-}
+// .modal-video {
+//     width: 100%;
+// }
 
 .modal-backdrop {
     background-color: rgba(0, 0, 0, 1); /* Adjust the alpha (opacity) value */
+}
+
+.modal.fade .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.modal-video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: calc(100vh - 100px); /* Para garantir que o vídeo não exceda a altura da tela */
 }
