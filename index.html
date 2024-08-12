@@ -438,6 +438,9 @@
                     // Obtém o caminho do vídeo a partir do atributo 'data-video-src'
                     const videoSrc = this.getAttribute('data-video-src');
                     
+                    // Obtém a descrição da cena
+                    const sceneDescription = this.querySelector('.scene-description').textContent;
+                    
                     // Seleciona o elemento <video> na modal
                     const modalVideo = document.getElementById('modalVideo');
                     
@@ -449,6 +452,10 @@
                     
                     // Reproduz o vídeo automaticamente
                     modalVideo.play();
+                    
+                    // Atualiza o título da modal com a descrição da cena
+                    const videoModalLabel = document.getElementById('videoModalLabel');
+                    videoModalLabel.textContent = sceneDescription;
                 });
             });
 
@@ -463,6 +470,7 @@
                 modalVideo.currentTime = 0;
             });
         });
+
 
 
         // // Modals
