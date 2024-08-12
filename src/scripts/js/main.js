@@ -18,44 +18,47 @@ $(document).ready(function() {
 });
 
 // Modals
-const thumbnailElements = document.querySelectorAll('.thumbnail');
-const videoModal = document.getElementById('videoModal');
-const modalVideo = document.getElementById('modalVideo');
-const modalTitle = document.getElementById('videoModalLabel');
-// const prevBtn = document.getElementById('prevBtn');
-// const nextBtn = document.getElementById('nextBtn');
+document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona todas as miniaturas que têm o atributo 'data-toggle' e 'data-target'
+    const thumbnails = document.querySelectorAll('.thumbnail[data-toggle="modal"]');
 
-let currentVideoIndex = 0;
-let videos = [];
-
-thumbnailElements.forEach(function (thumbnail, index) {
-    const videoSrc = thumbnail.dataset.videoSrc;
-    const videoTitle = thumbnail.querySelector('.scene-description').innerText;
-
-    videos.push({
-        src: videoSrc,
-        title: videoTitle
+    thumbnails.forEach(function (thumbnail) {
+        thumbnail.addEventListener('click', function () {
+            // Obtém o caminho do vídeo a partir do atributo 'data-video-src'
+            const videoSrc = this.getAttribute('data-video-src');
+            
+            // Obtém a descrição da cena
+            const sceneDescription = this.querySelector('.scene-description').textContent;
+            
+            // Seleciona o elemento <video> na modal
+            const modalVideo = document.getElementById('modalVideo');
+            
+            // Atualiza o atributo 'src' da tag <source> dentro do <video>
+            modalVideo.querySelector('source').src = videoSrc;
+            
+            // Carrega o vídeo para que o navegador entenda que o src foi atualizado
+            modalVideo.load();
+            
+            // Reproduz o vídeo automaticamente
+            modalVideo.play();
+            
+            // Atualiza o título da modal com a descrição da cena
+            const videoModalLabel = document.getElementById('videoModalLabel');
+            videoModalLabel.textContent = sceneDescription;
+        });
     });
 
-    thumbnail.addEventListener('click', function () {
-        currentVideoIndex = index;
-        updateModalContent();
-        $('#videoModal').modal('show');
+    // Pausa o vídeo e reseta o tempo quando a modal é fechada
+    $('#videoModal').on('hidden.bs.modal', function () {
+        const modalVideo = document.getElementById('modalVideo');
+        
+        // Pausa o vídeo
+        modalVideo.pause();
+        
+        // Reseta o tempo do vídeo para o início
+        modalVideo.currentTime = 0;
     });
 });
-
-function updateModalContent() {
-    console.log(`Loading video: ${videos[currentVideoIndex].src}`);
-    modalVideo.innerHTML = `<source src="${videos[currentVideoIndex].src}" type="video/mp4">`;
-    modalVideo.load(); // Ensure the video is loaded
-    modalVideo.play(); // Play the video
-    modalTitle.innerText = videos[currentVideoIndex].title;
-}
-
-$('#videoModal').on('hide.bs.modal', function () {
-    modalVideo.pause();
-});
-
 
 // Mobile Menu
 document.addEventListener("DOMContentLoaded", function() {
