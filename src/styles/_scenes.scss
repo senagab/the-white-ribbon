@@ -243,6 +243,20 @@
             }
         }
     }
+
+    .modal-title {
+        font-size: 50px;
+    }
+
+    button.close span {
+        font-size: 65px;
+    }
+
+    .modal-backdrop {
+        background-color: rgba(0, 0, 0, 1); /* Adjust the alpha (opacity) value */
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
