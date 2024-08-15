@@ -209,6 +209,10 @@
                 font-size: 25px !important;
             }
 
+            .invisible-text {
+                display: none;
+            }
+
             &__container {
                 display: flex;
                 justify-content: center;
@@ -223,6 +227,8 @@
                 
                 &__text--sm {
                     display: block;
+                    overflow-y: auto; // Enable vertical scrolling
+                    max-height: 70vh; // Restrict the height of the scrollable container
 
                     .text--small {
                         margin-top: 15px;
