@@ -41,20 +41,6 @@
         });
     });
 
-    // comportamento botão roll up         
-        $(document).ready(function() {
-            $(window).scroll(function() {
-                // check if the scroll position has passed the section with id "hero"
-                if ($(this).scrollTop() > $('#hero').offset().top + $('#hero').outerHeight()) {
-                    // show the roll div with slide up animation
-                    $('.roll').slideDown();
-                } else {
-                    // hide the roll div if not in the desired position
-                    $('.roll').slideUp();
-                }
-            });
-        });
-
 // efeito seção 'revelador de background' | concept
     $(document).ready(function() {
         $('#concept').mousemove(function(event) {
