@@ -247,6 +247,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
+        justify-content: center;
         height: 160vh !important;
         width: 100%;
         min-width: 1024px;
@@ -334,9 +335,3 @@
         }
     }
 }
-
-// @media (min-aspect-ratio: 2/1) {
-//     .footer {
-//         height: 65vh;
-//     }
-// }
