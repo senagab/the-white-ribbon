@@ -80,7 +80,7 @@
                 color: #fbffcd;
                 letter-spacing: 10px;
                 text-transform: uppercase;
-                margin-bottom: 30px;
+                margin-bottom: 45px;
             }
 
             .title--medium {
@@ -228,7 +228,7 @@
                 &__text--sm {
                     display: block;
                     overflow-y: auto; // Enable vertical scrolling
-                    max-height: 70vh; // Restrict the height of the scrollable container
+                    max-height: 100vh; // Restrict the height of the scrollable container
 
                     .text--small {
                         margin-top: 15px;
