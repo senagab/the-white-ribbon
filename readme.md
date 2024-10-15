@@ -1,6 +1,8 @@
-# White Ribbon
+# The White Ribbon
 
 Welcome to the official website dedicated to Michael Haneke's masterpiece, "The White Ribbon".
+
+![Screenshot Home]([image-url-or-path](https://github.com/senagab/servidores-estaticos/blob/main/white_ribbon.png))
 
 ## About
 
