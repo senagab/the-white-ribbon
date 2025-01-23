@@ -1,5 +1,8 @@
 # The White Ribbon
 
+<img src="https://img.shields.io/badge/gulp-v4.0.2-e44849?labelColor=black&logo=gulp"/>
+<img src="https://img.shields.io/badge/sass-v1.69.5-pink?labelColor=black&logo=sass"/>
+
 Welcome to the official website dedicated to Michael Haneke's masterpiece, "The White Ribbon".
 
 ![Screenshot Home](https://github.com/senagab/servidores-estaticos/blob/main/white_ribbon.png)
